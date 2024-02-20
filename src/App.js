@@ -1,24 +1,61 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './component/Navbar';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import About from './component/About';
+import Team from './component/Team';
+import Contact from './component/Contact';
+import Careers from './component/Careers';
+import Newsroom from './component/Newsroom';
+import Home from './component/Home';
+import DataAnalyticsService from './component/DataAnalyticsService';
+import CloudService from './component/CloudService';
+import QualityEngineeringService from './component/QualityEngineeringService';
+import ScmManagement from './component/ScmManagement';
+import ScmImplementation from './component/ScmImplementation';
+import ScmManaged from './component/ScmManaged';
+import ScmMigration from './component/ScmMigration';
+import  ScmSatffing from './component/ScmStaffing';
+import Technology from './component/Technology';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/about" element={<About />} />
+          {/* Add routes for other pages */}
+          <Route path="/Team" element={<Team />} />
+          {/* Add routes for other pages */}
+          <Route path="/Contact" element={<Contact />} />
+          {/* Add routes for other pages */}
+          <Route path="/Careers" element={<Careers />} />
+          {/* Add routes for other pages */}
+          <Route path="/Newsroom" element={<Newsroom />} />
+          {/* Add routes for other pages */}
+          <Route path="/Home" element={<Home />} />
+          {/* Add routes for other pages */}
+          <Route path="/Data Analytics" element={<DataAnalyticsService/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Cloud" element={<CloudService />} />
+          {/* Add routes for other pages */}
+          <Route path="/Quality Engineering" element={<QualityEngineeringService/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Management Consulting" element={<ScmManagement/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Implementation Services" element={<ScmImplementation/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Upgrade and Migration Services" element={<ScmMigration/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Managed Services" element={<ScmManaged/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Staffing/IS/IT" element={<ScmSatffing/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Technology" element={<Technology/>} />
+          {/* Add routes for other pages */}
+         
+        </Routes>
+    </BrowserRouter>
   );
 }
 
