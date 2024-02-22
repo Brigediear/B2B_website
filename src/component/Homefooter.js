@@ -1,5 +1,7 @@
 import React from 'react';
-import Btb from './Image/imagebtb.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 const Footer = () => {
   return (
     <>
@@ -30,32 +32,10 @@ const Footer = () => {
           }}
         >
           <div
-            className="footer__logo"
-            style={{
-              flex: '0 0 100%',
-              marginBottom: '20px',
-            }}
-          >
-            {/* Replace "logo.png" with the path to your logo image */}
-            <img src={Btb} height="56" width="56" alt=" " />
-
-          </div>
-          <div
             className="footer__section"
             style={{
               flex: '0 0 30%',
-            }}
-          >
-            <h3 style={{ fontSize: '1.2rem' }}>BitTwoByte Technologies Pvt. Ltd.</h3>
-            <p>10/420, Ward No. 10</p>
-            <p>Anantpur, Rewa(M.P.), India -486001</p>
-            <p>Email: info@bittwobyte.com</p>
-            <p>Phone: TRIN-TRIN</p>
-          </div>
-          <div
-            className="footer__section"
-            style={{
-              flex: '0 0 30%',
+              marginLeft: '20px',
             }}
           >
             <h3 style={{ fontSize: '1.2rem' }}>Quick Links</h3>
@@ -79,10 +59,18 @@ const Footer = () => {
                 display: 'flex',
               }}
             >
-              <a href="#"><i className="fa fa-facebook" style={{ color: '#fff', marginRight: '10px' }}></i></a>
-              <a href="#"><i className="fa fa-twitter" style={{ color: '#fff', marginRight: '10px' }}></i></a>
-              <a href="#"><i className="fa fa-linkedin" style={{ color: '#fff', marginRight: '10px' }}></i></a>
-              <a href="#"><i className="fa fa-instagram" style={{ color: '#fff' }}></i></a>
+              <a href="https://www.facebook.com/your-facebook-username" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '24px', color: '#316FF6', marginRight: '10px' }} />
+              </a>
+              <a href="https://twitter.com/your-twitter-username" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTwitter} style={{ fontSize: '24px', color: '#1DA1F2', marginRight: '10px' }} />
+              </a>
+              <a href="https://www.linkedin.com/company/bittwobyte-technology-private-limited/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '24px', color: '#0077b5', marginRight: '10px' }} />
+              </a>
+              <a href="https://www.instagram.com/your-instagram-username" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} style={{ fontSize: '24px', color: '#833ab4' }} />
+              </a>
             </div>
           </div>
         </div>
@@ -94,7 +82,7 @@ const Footer = () => {
         style={{
           backgroundColor: '#012353',
           color: '#ffffff',
-          padding: '10px 0',
+          padding: '5px',
           textAlign: 'center',
         }}
       >

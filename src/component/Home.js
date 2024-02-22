@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Footer from './Homefooter';
 import BannerBoxes from './BannerBox';
 import WhatWeDo from './Whatwedo';
+import DiscoverSection from './DiscoverSection';
+import BigDataServicesArea from './BigDataServicesArea';
 
 const Home = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
@@ -158,7 +160,8 @@ const Home = () => {
 
       {/* WhatWeDo */}
       <WhatWeDo />
-
+      <DiscoverSection />
+      <BigDataServicesArea />
       {/* Footer */}
       <Footer />
     </>
