@@ -3,19 +3,21 @@ import React from 'react';
 const DiscoverSection = () => {
   return (
     <div
-      className="row align-items-center"
+      className="container-fluid" // Use container-fluid to make the width full-screen
       style={{
-        alignItems: 'center!important',
         position: 'relative',
         zIndex: '1',
         background: 'linear-gradient(135deg, #012353 , #43e794)',
         paddingTop: '50px',
         paddingBottom: '50px',
+        paddingLeft: '20px', // Adjust left padding
+        paddingRight: '20px', // Adjust right padding
       }}
     >
       <div
-        className="col-lg-6 col-md-12"
+        className="row align-items-center"
         style={{
+          alignItems: 'center!important',
           '--bs-gutter-x': '1.6rem',
           '--bs-gutter-y': '0.5',
           display: 'flex',
@@ -25,41 +27,32 @@ const DiscoverSection = () => {
           marginLeft: 'calc(-.5 * var(--bs-gutter-x))',
         }}
       >
-        <div className="discover-image">
-        <img
-  alt="image"
-  loading="lazy"
-  width="320"
-  height="320"
-  decoding="async"
-  data-nimg="1"
-  style={{ marginLeft: '70px' }}  
-  src="ImageAI.jpg"
-/>
-<img
-  alt="image"
-  loading="lazy"
-  width="360"
-  height="300"
-  decoding="async"
-  data-nimg="1"
-  style={{ marginLeft: '250px', marginTop: '-150px' }}
-  src="ImageAI2.jpg"
-/>
-
+        <div className="col-lg-6 col-md-12">
+          <div className="discover-image">
+            <img
+              alt="image"
+              loading="lazy"
+              width="500"
+              height="500"
+              decoding="async"
+              data-nimg="1"
+              style={{ marginLeft: '8px' }}  
+              src="ImageAI.png"
+            />
+          </div>
         </div>
-      </div>
-      <div className="col-lg-6 col-md-12">
-        <div className="discover-content">
-          <h2>Engaging New Audiences through Smart Approach</h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form, by injected humour, or randomised words which don't look even slightly believable. If you are
-            going to use a passage.
-          </p>
-          <a className="btn btn-primary" href="/bigdata-analytics/#">                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-            Discover More
-          </a>
+        <div className="col-lg-6 col-md-12">
+          <div className="discover-content">
+            <h2 style={{ color: '#ffffff' }}>Engaging New Audiences through Smart Approach</h2>
+            <p style={{ color: '#ffffff' }}>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+              going to use a passage.
+            </p>
+            <a className="btn btn-primary" href="/bigdata-analytics/#" style={{ color: '#ffffff' }}>
+              Discover More
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,104 @@
+
+/* Styles for the container of team members */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.team-member {
+  text-align: center;
+  margin: 100px 15px 30px 15px;
+  width: calc(33.33% - 30px);
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s;
+
+}
+
+
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .team-member {
+    width: 48%; /* Adjust width for smaller screens */
+    max-width: calc(48% - 30px); /* Adjust max-width for smaller screens */
+  }
+}
+
+
+/* Hover effect on team member boxes */
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for team member images */
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 60%;
+  object-fit: cover;
+}
+
+/* Styles for team member names */
+.team-member h3 {
+  margin-top: 20px; /* Adjust the margin to your preference */
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 1;
+}
+
+/* Styles for team member descriptions */
+.team-member p {
+  color: #000000;
+  font-weight: bold;
+}
+
+
+
+/* SeniorTeam.css */
+
+.background-image {
+  background-image: url('tech1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Set the height as needed */
+  width: 100%;
+}
+
+.blank-page {
+  background-color: #ffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 5vh; /* Adjust the height as per your requirement */
+}
+
+
+.team-members-wrapper {
+  background-color: rgb#ffff; /* Set the background color for the team members' wrapper */
+  padding: 20px; /* Set padding as needed */
+  border-radius: 15px; /* Optional: Add border-radius for a rounded look */
+  box-shadow: 0 4px 12px rgba(151, 13, 13, 0.1); /* Optional: Add box-shadow for a subtle effect */
+}
+
+
+.team-member {
+  
+  text-align: center;
+  margin: 100px 15px 30px 15px;
+  width: calc(33.33% - 30px);
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%); /* This line sets the background color */
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}

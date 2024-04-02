@@ -1,35 +1,59 @@
-// BigDataServicesArea.js
-
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase, faChartBar, faGavel } from '@fortawesome/free-solid-svg-icons';
 
-const SingleServiceItem = ({ title, description, icon }) => {
-  const boxContainerStyle = {
-    border: '2px solid #288939',
-    padding: '20px',
-    borderRadius: '10px',
-    marginBottom: '20px',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-  };
+// Define the styled component
+const ServiceItemWrapper = styled.div`
+  /* Add your styles here */
+  .single-services-box-item {
+    position: relative; /* Ensure positioning context for the image */
+    border: 2px solid #288939;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
 
+  .single-services-box-item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    z-index: 2;
+  }
+
+  .icon {
+    color: #288939;
+    font-size: 2rem;
+  }
+
+  h3 a {
+    /* Add your link styles here */
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Add the rest of your styles here... */
+`;
+
+const SingleServiceItem = ({ title, description, icon }) => {
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
-      <div style={boxContainerStyle}>
-        <div className="single-services-box-item">
-          {/* FontAwesome icon */}
-          <div className="icon">
-            <FontAwesomeIcon icon={icon} style={{ color: '#288939', fontSize: '2rem' }} />
-          </div>
-          <h3><a href="/services/service-details/">{title}</a></h3>
-          <p>{description}</p>
-          <a className="learn-more-btn" href="/services/service-details/"></a>
-          <div className="shape">
-            <img alt="image" loading="lazy" width="500" height="300" decoding="async" data-nimg="1" style={{ color: 'transparent' }} src="/images/bigdata-analytics/rectangle.png" />
-          </div>
+    <ServiceItemWrapper className="col-lg-4 col-md-6 col-sm-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
+      <div className="single-services-box-item">
+        {/* Image in the top right corner */}
+        <img src="rectangle.png" alt="Service Image" style={{ position: 'absolute', top: 0, right: 0, width: '300px', height: '100px', borderRadius: '50%', zIndex: 1 }} />
+
+        {/* FontAwesome icon */}
+        <div className="icon">
+          <FontAwesomeIcon icon={icon} />
+        </div>
+        <h3><a href="/services/service-details/">{title}</a></h3>
+        <p>{description}</p>
+        <a className="learn-more-btn" href="/services/service-details/"></a>
+        <div className="shape">
+
         </div>
       </div>
-    </div>
+    </ServiceItemWrapper>
   );
 };
 
@@ -47,10 +71,7 @@ const BigDataServicesArea = () => {
   }, [pointerPosition]);
 
   return (
-    <div
-      className="bigdata-services-area ptb-80 bg-eef6fd text-center"
-      style={{ '--bs-gutter-x': '1.5rem', '--bs-gutter-y': 0, width: '100%', padding: '0 calc(var(--bs-gutter-x) * .5)', margin: '0 auto' }}
-    >
+    <div className="bigdata-services-area ptb-80 bg-eef6fd text-center">
       <div className="container">
         <div className="section-title">
           <h2>Services We Can Help You With</h2>

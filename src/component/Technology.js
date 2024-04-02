@@ -1,53 +1,201 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Footer from './Homefooter';
 
-const Technology = () => {
-  const technologies = [
-    { name: 'Python', image: 'https://www.incentius.com/wp-content/uploads/2024/01/Group-122.png' },
-    { name: 'AWS', image: 'https://www.incentius.com/wp-content/uploads/2024/01/Group-120.png' },
-    { name: 'React JS', image: 'https://www.incentius.com/wp-content/uploads/2024/01/Group-119.png' },
-    { name: 'Pandas', image: 'https://www.incentius.com/wp-content/uploads/2024/01/Group-117.png' },
-    { name: 'Informatica', image: 'https://tse3.mm.bing.net/th?id=OIP.coiey5Yy7Lpo2n5L_68rogHaHa&pid=Api&P=0&h=180'},
-  ];
+const TechnologyPage = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    // Mock data with placeholder image URLs
+    const mockCategories = [
+      {
+        id: 1,
+        name: 'ETL & BI Tools',
+        height: '100px',
+        items: [
+          { id: 9, imageUrl: 'tools_Talend.png' },
+          { id: 10, imageUrl: 'Tools_IPC.png' },
+          { id: 12, imageUrl: 'Tools_Apache_Hadoop.png' },
+          { id: 13, imageUrl: 'Tools_Pentaho.png' },
+          { id: 14, imageUrl: 'Tools_Apache_Airflow.png' },
+          { id: 15, imageUrl: 'Tools_Airbyte.png' },
+          { id: 16, imageUrl: 'Tools_PowerBI.png' },
+          { id: 17, imageUrl: 'Tools_Tableau.png' },
+          { id: 18, imageUrl: 'Tools_YellowfinBI.png' },
+          { id: 19, imageUrl: 'Tools_Metabase.png' },
+        ],
+      },
+      {
+        id: 2,
+        name: 'Databases',
+        items: [
+          { id: 1, imageUrl: 'Database_MongoDB.png' },
+          { id: 2, imageUrl: 'Database_Amazon_Redshift.png' },
+          { id: 3, imageUrl: 'Database_BigQuery.png' },
+          { id: 4, imageUrl: 'Database_Snowflake.png' },
+          { id: 5, imageUrl: 'Database_MariaDB.png' },
+          { id: 6, imageUrl: 'Database_PostgreSQL.png' },
+          { id: 7, imageUrl: 'Database_MySQL.png' },
+          { id: 8, imageUrl: 'Database_Microsoft_SQL_Server.png' },
+        ],
+      },
+      {
+        id: 3,
+        name: 'Manage & Control',
+        items: [
+          { id: 20, imageUrl: 'Manage_Jenkins.PNG' },
+          { id: 21, imageUrl: 'Manage_bitbucket.png' },
+          { id: 22, imageUrl: 'Manage_Docker.png' },
+          { id: 23, imageUrl: 'Manage_GitHub.png' },
+        ],
+      },
+      {
+        id: 4,
+        name: 'Programming Languages',
+        items: [
+          { id: 24, imageUrl: 'Languages_python.png' },
+          { id: 25, imageUrl: 'Language_MIX.png' },
+          { id: 28, imageUrl: 'Language_Vue.png' },
+          { id: 29, imageUrl: 'Language_Node.png' },
+          { id: 30, imageUrl: 'Languages_PHP.png' },
+          { id: 32, imageUrl: 'Language_React.png' },
+          { id: 35, imageUrl: 'Language_Salesforce.png' },
+        ],
+      },
+      {
+        id: 5,
+        name: 'Cloud and Other Services',
+        items: [
+          { id: 36, imageUrl: 'Cloud_Amazon_Lambda.png' },
+          { id: 37, imageUrl: 'Cloud_Git.png' },
+          { id: 38, imageUrl: 'Cloud_AWSS3.png' },
+          { id: 39, imageUrl: 'Cloud_AWS_RDS.png' },
+          { id: 45, imageUrl: 'Cloud_AWS_SES.png' },
+          { id: 46, imageUrl: 'Cloud_Selenium.png' },
+        ],
+      },
+    ];
+
+    setCategories(mockCategories);
+  }, []); // Fix: Correct the dependency array
+
+  const BlankPage = () => (
+    <div style={{ position: 'relative' }}>
+      <div
+        style={{
+          height: '40vh',
+          backgroundImage: `url("tech1.jpg")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          padding: '20px',
+          borderRadius: '5px',
+          marginBottom: '20px',
+          marginLeft: '-10vw',
+          marginRight: '-10vw',
+          textAlign: 'left',
+        }}
+      >
+        <h1 style={{ color: '#fff' }}>TECHNOLOGY</h1>
+      </div>
+      <Content />
+    </div>
+  );
+
+  const Content = () => (
+    <div style={{ color: '#000000', zIndex: 1 }}>
+      <p>
+        BitTwoByte Technology is a cutting-edge firm dedicated to pioneering solutions across various digital domains.
+        Specializing in software development, data analytics, and cloud computing, BitTwoByte offers tailored services
+        to streamline business operations. With a focus on innovation and efficiency, BitTwoByte empowers organizations
+        to leverage technology effectively for enhanced productivity and growth. From creating custom software
+        solutions to optimizing data analytics pipelines, BitTwoByte is committed to delivering top-notch services that
+        align with clients' unique needs. With a team of skilled professionals and a customer-centric approach,
+        BitTwoByte aims to drive digital transformation and propel businesses towards success in today's rapidly
+        evolving technological landscape.
+      </p>
+    </div>
+  );
+
+  const pageContainerStyle = {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '20px',
+    color: '#000000', // Change text color to black
+    backgroundColor: '#ffffff',
+  };
+
+  const containerStyle = {
+    backgroundColor: '#ffffff',
+    padding: '10px',
+    borderRadius: '5px',
+    borderBottom: '5px solid #000000',
+    borderTop: 'none',
+    textAlign: 'center',
+	marginLeft: '-10vw',
+    marginRight: '-10vw',
+    marginBottom: '20px', // Add margin bottom for spacing
+  };
+
+  const headingStyle = {
+    color: '#000000', // Change heading color to black
+    marginBottom: '10px', // Add margin bottom for spacing
+  };
+
+  const listStyle = {
+    listStyleType: 'none',
+    padding: '0',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  };
+
+  const listItemStyle = {
+    marginBottom: '10px',
+    marginRight: '20px',
+    width: '200px',
+    height: '150px',
+    transition: 'transform 0.3s ease-in-out',
+  };
+
+  const handleMouseEnter = (e) => {
+    e.target.style.transform = 'scale(0.9)';
+  };
+
+  const handleMouseLeave = (e) => {
+    e.target.style.transform = 'scale(1)';
+  };
+
+  const imageStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+  };
 
   return (
-    <div className="lazyblock-new-toolbox-XoGBI wp-block-lazyblock-new-toolbox">
-      <div className="mt-8 md:mt-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 md:justify-start md:space-x-10">
-        <hr className="border border-solid border-[#E2E2E2]" />
-        <div style={{ marginLeft: '0px' }} className="py-10 md:py-20">
-          <div className="grid md:grid-cols-1">
-            <div className="text-2xl md:text-5xl font-bold text-white">
-              <span className="bg-[#9DBE40]">Tech</span> <span className="text-[#212121]">Toolbox</span>
-            </div>
-          </div>
-          <div className="grid text-sm md:text-lg mt-2 md:mt-3 md:grid-cols-1">
-            <div>
-              <span className="font-normal">Where Cutting-Edge Meets Capability - Our Tech Landscape</span>
-            </div>
-          </div>
-          <div className="mt-8 px-4">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-1 md:gap-5 items-center justify-items-center">
-              {technologies.map((tech, index) => (
-                <div key={index} className="flex flex-col items-center mb-8">
-                  <img decoding="async" src={tech.image} alt={tech.name} className="max-h-20 mb-2" />
-                  <div className="text-[#212121] text-sm text-center font-semibold">
-                    {tech.name}
-                  </div>
-                </div>
+    <div style={pageContainerStyle}>
+      <BlankPage />
+      <div style={{ marginTop: '20px' }}>
+        {categories.map((category) => (
+          <div key={category.id} style={containerStyle} className="technology-container">
+            <h2 style={headingStyle}>{category.name}:</h2>
+            <ul style={listStyle}>
+              {category.items.map((item) => (
+                <li
+                  key={item.id}
+                  style={listItemStyle}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <img src={item.imageUrl} alt={item.name} style={imageStyle} />
+                  <p>{item.name}</p>
+                </li>
               ))}
-            </div>
-            <div>
-              <a href="/tech" className="inline-flex items-center gap-x-1.5 border cursor-pointer border-[#9DBE40] text-sm text-[#9DBE40] px-3 py-2 rounded-full font-semibold hover:text-[#9DBE40]">
-                <svg className="h-5 w-5" viewBox="0 0 20 20" fill="#9DBE40" aria-hidden="true">
-                  <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"></path>
-                </svg>
-                <span className="text-[#9DBE40]">50 more</span>
-              </a>
-            </div>
+            </ul>
           </div>
-        </div>
+        ))}
       </div>
+      <Footer />
     </div>
   );
 };
 
-export default Technology;
+export default TechnologyPage;

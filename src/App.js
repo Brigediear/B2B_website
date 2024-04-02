@@ -11,13 +11,16 @@ import Newsroom from './component/Newsroom';
 import Home from './component/Home';
 import DataAnalyticsService from './component/DataAnalyticsService';
 import CloudService from './component/CloudService';
-import QualityEngineeringService from './component/QualityEngineeringService';
+import DataEngineeringService from './component/DataEngineeringService';
 import ScmManagement from './component/ScmManagement';
 import ScmImplementation from './component/ScmImplementation';
 import ScmManaged from './component/ScmManaged';
 import ScmMigration from './component/ScmMigration';
 import  ScmSatffing from './component/ScmStaffing';
 import Technology from './component/Technology';
+import Services from './component/Services';
+import SCM from './component/SCM';
+
 function App() {
   return (
     <BrowserRouter>
@@ -39,7 +42,7 @@ function App() {
           {/* Add routes for other pages */}
           <Route path="/Cloud" element={<CloudService />} />
           {/* Add routes for other pages */}
-          <Route path="/Quality Engineering" element={<QualityEngineeringService/>} />
+          <Route path="/Data Engineering" element={<DataEngineeringService/>} />
           {/* Add routes for other pages */}
           <Route path="/Management Consulting" element={<ScmManagement/>} />
           {/* Add routes for other pages */}
@@ -53,9 +56,14 @@ function App() {
           {/* Add routes for other pages */}
           <Route path="/Technology" element={<Technology/>} />
           {/* Add routes for other pages */}
-         
-        </Routes>
+          <Route path="/services" element={<Services/>} />
+          {/* Add routes for other pages */}
+          <Route path="/SCM  »" element={<SCM/>} />
+          {/* Add routes for other pages */}
+
+          </Routes>   
     </BrowserRouter>
+    
   );
 }
 

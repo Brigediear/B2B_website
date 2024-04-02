@@ -1,52 +1,150 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import Footer from './Homefooter';
 
+function importAll(r) {
+  return r.keys().map(key => ({ name: key.split('/').pop().split('.')[0], src: r(key) }));
+}
+
+const images = importAll(require.context('./', false, /\.(png|jpg|svg)$/));
+
 const Team = () => {
-  return (
-    <div style={{ position: 'relative' }}>
-      <video 
-        autoPlay
-        loop
-        muted
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-        }}
-      >
-        <source src="C:\Users\khusb\Documents\React_File\video (2160p).mp4" type="video/mp4" />
-        {/* Add additional source elements for different video formats if needed */}
-      </video>
-      <div className="Team">
-        <h1>BitTwoByte Team</h1>
-        <p>Thought Leadership | Excellence | Impactful</p>
-        <p>Get To Know The Team</p>
-        <p>The team at bittwobyte believes in empowering teams to deliver their most impactful work, by building a culture
-          of innovation & growth, where everyone can thrive.</p>
-      </div>
+  const [teamMembers, setTeamMembers] = useState([]);
 
-      <h2 style={{ textAlign: 'center' }}>Our Team</h2>
+  useEffect(() => {
+    // Mock data for team members
+    const mockTeamMembers = [
+      { name: 'Vijay Patel', designation: 'VP', imageSrc: 'Vijay.png', description: 'Some description for Vijay Patel.' }
+    ];
+    setTeamMembers(mockTeamMembers);
+  }, []);
 
-      <div className="row">
-        {/* Your team member cards */}
-        <div className="column">
-          {/* Team member card example */}
-          <div className="card">
-            <img src="..." alt="Team Member" style={{ width: '100%' }} />
-            <div className="container">
-              <h2>Team Member Name</h2>
-              <p className="title">Team Member Title</p>
-              <p>Some text that describes the team member.</p>
-            </div>
-          </div>
-        </div>
-        {/* Repeat similar structure for other team members */}
-      </div>
+  const blankPageStyle = {
+    backgroundImage: 'url(tech1.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    padding: '20px',
+    borderRadius: '5px',
+    marginBottom: '10px',
+    textAlign: 'left',
+    height: '5vh', // Adjust the height as per your requirement
+  };
 
-      {/* Your actual Footer component */}
-      <Footer />
+  const BlankPage = () => (
+    <div>
+      <div className="background-image"></div>
+      <div style={blankPageStyle}></div>
     </div>
+  );
+
+  const SortableTeamMember = SortableElement(({ member }) => (
+    <div className="team-member">
+      <img src={member.imageSrc} alt={member.name} />
+      <div className="team-member-info">
+        <h3>{member.name}</h3>
+        <p>{member.designation}</p>
+      </div>
+    </div>
+  ));
+
+  const SortableTeamContainer = SortableContainer(({ teamMembers }) => (
+    <div className="team-container">
+      {teamMembers.map((member, index) => (
+        <SortableTeamMember key={index} index={index} member={member} />
+      ))}
+    </div>
+  ));
+
+  const cssStyles = `
+    /* Styles for the container of team members */
+    .team-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+    }
+
+    .team-member {
+      text-align: center;
+      margin: auto; /* Center horizontally */
+      margin-top: 50px; /* Adjust top margin as needed */
+      width: calc(33.33% - 30px);
+      box-sizing: border-box;
+      background-color: hsl(0, 0%, 100%);
+      padding: 15px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    /* Hover effect on team member boxes */
+    .team-member:hover {
+      transform: scale(1.05);
+    }
+
+    /* Styling for team member images */
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 60%;
+      object-fit: cover;
+    }
+
+    /* Styles for team member names */
+    .team-member h3 {
+      margin-top: 20px; /* Adjust the margin to your preference */
+      font-size: 1.5rem;
+      color: #000000;
+      line-height: 1;
+    }
+
+    /* Styles for team member descriptions */
+    .team-member p {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    /* SeniorTeam.css */
+    .background-image {
+      background-image: url('tech1.jpg'); 
+      background-size: cover;
+      background-position: center;
+      height: 300px; /* Set the height as needed */
+      width: 100%;
+    }
+
+    .blank-page {
+      background-color: #ffff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: left;
+      height: 5vh; /* Adjust the height as per your requirement */
+    }
+
+    .team-members-wrapper {
+      background-color: rgb#ffff; /* Set the background color for the team members' wrapper */
+      padding: 20px; /* Set padding as needed */
+      border-radius: 15px; /* Optional: Add border-radius for a rounded look */
+      box-shadow: 0 4px 12px rgba(151, 13, 13, 0.1); /* Optional: Add box-shadow for a subtle effect */
+    }
+  `;
+
+  return (
+    <>
+      <style>{cssStyles}</style>
+      <BlankPage />
+      <div className="blank-page">
+        <h1 style={{ textAlign: 'center', color: '#000000', background: 'none', padding: 0 }}>Get To Know The Team</h1>
+        <p style={{ textAlign: 'center', color: '#000000' }}>
+         <h5> The team at BitTwoBye believes in empowering teams to deliver their most impactful work, by building a culture
+          of innovation & growth, where everyone can thrive.</h5>
+        </p>
+        <div className="team-members-wrapper">
+          <SortableTeamContainer teamMembers={teamMembers} />
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

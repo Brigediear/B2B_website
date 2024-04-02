@@ -1,17 +1,45 @@
 import React from 'react';
- 
+
 const BannerBoxes = () => {
   return (
-    <div className="banner-boxes-area" style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', background: '#fff', padding: '20px 0' }}>
-	<style>
+    <div className="banner-boxes-container">
+      <style>
         {`
+          .banner-boxes-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            padding: 20px 0;
+            z-index: 999;
+          }
+
           .single-banner-boxes {
             background-color: transparent;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
           }
- 
+
           .single-banner-boxes:hover {
-            background-color: #daffc5; /* Set your desired hover color here */
+            background: linear-gradient(135deg, #012353, #43e794);
           }
+
+          .single-banner-boxes:hover h3,
+          .single-banner-boxes:hover p {
+            color: #ffffff;
+          }
+
+
+          .banner-boxes-container {
+            background-position: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 280px;
+            padding-bottom: 25px;
+        }
         `}
       </style>
       <div className="container">
@@ -85,17 +113,17 @@ const BannerBoxes = () => {
     </div>
   );
 };
- 
+
 const BannerBox = ({ icon, title, description }) => {
   return (
     <div className="col-lg-4 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
-      <div className="single-banner-boxes" style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '10px', textAlign: 'center' }}>
-        <div className="icon" style={{ marginBottom: '10px' }}>{icon}</div>
+      <div className="single-banner-boxes">
+        <div style={{ marginBottom: '10px' }}>{icon}</div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
   );
 };
- 
+
 export default BannerBoxes;
