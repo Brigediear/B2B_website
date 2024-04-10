@@ -156,16 +156,21 @@ const Navbar = () => {
               <img src={Btb} height="56" width="259" alt=" " />
             </Link>
             <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style={{ backgroundColor: '#fff', border: 'none' }}
+    >
+      <span className="navbar-toggler-icon" style={{ color: '#000' }}>
+        <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
+        </svg>
+      </span>
+    </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li

@@ -8,7 +8,7 @@ const DataAnalyticsService = () => {
         <div className='col-md-12'>
           <div
             className='bg-primary text-white text-center p-5'
-            style={{ backgroundImage: "url('dataAnalyticshome.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+            style={{ backgroundImage: "url('dataAnalyticshome.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',height: '350px' }}
           >
             <div className='h1'>
               Data Analytics <br />& Intelligence
@@ -135,24 +135,23 @@ const DataAnalyticsService = () => {
           Contact us today to embark on your data-driven journey.
         </div>
         <div className="text-center">
-          <button
-            className="btn btn-light btn-lg"
-            style={{
-              padding: '1vw 2vw',
-              fontSize: '1vw',
-              backgroundColor: 'white',
-              color: 'black',
-              borderRadius: '2vw',
-              cursor: 'pointer',
-              transitionDuration: '0.2s',
-              border: 'none',
-              fontWeight: 'bold'
-            }}
-            onMouseOver={(e) => { e.target.style.backgroundColor = 'lightblue'; }}
-            onMouseOut={(e) => { e.target.style.backgroundColor = 'white'; }}
-          >
-            Let's Talk
-          </button>
+        <a href="/contact" className="btn btn-light btn-lg"
+          style={{
+            padding: '1vw 2vw',
+            fontSize: '1vw',
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '2vw',
+            cursor: 'pointer',
+            transitionDuration: '0.2s',
+            border: 'none',
+            fontWeight: 'bold'
+          }}
+          onMouseOver={(e) => { e.target.style.backgroundColor = 'lightblue'; }}
+          onMouseOut={(e) => { e.target.style.backgroundColor = 'white'; }}
+        >
+          Let's Talk
+        </a>
         </div>
       </div>
       <Footer />

@@ -155,7 +155,7 @@ Cultivating strong relationships with suppliers is essential for ensuring a reli
      
 </div>
 
-<div style={{   marginTop: '10px', padding: '20px', height: '80vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
+<div style={{   marginTop: '10px', padding: '10px', height: '90vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
       
 <div 
@@ -168,6 +168,7 @@ padding: '40px',
 fontSize:'20px',
 borderBottom: '1px solid #02133805', // Set bottom border
 backgroundColor: 'white',  
+marginTop: '10px'
 }}
 onMouseOver={(e) => { e.currentTarget.style.borderBottom = '2px solid #43e794'; }}
 onMouseOut={(e) => { e.currentTarget.style.borderBottom = '2px solid #02133805'; }}>

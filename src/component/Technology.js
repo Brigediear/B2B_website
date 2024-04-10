@@ -130,7 +130,7 @@ const TechnologyPage = () => {
     borderBottom: '5px solid #000000',
     borderTop: 'none',
     textAlign: 'center',
-	marginLeft: '-10vw',
+    marginLeft: '-10vw',
     marginRight: '-10vw',
     marginBottom: '20px', // Add margin bottom for spacing
   };
@@ -195,6 +195,7 @@ const TechnologyPage = () => {
       </div>
       <Footer />
     </div>
+    
   );
 };
 

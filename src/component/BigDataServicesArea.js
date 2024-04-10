@@ -81,28 +81,28 @@ const BigDataServicesArea = () => {
               style={{ width: '20px', height: '20px', background: '#288939', position: 'absolute', top: '-7.5px', left: `calc(${pointerPosition}%)`, borderRadius: '50%', transition: 'left 0.5s ease' }}
             ></div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Provide comprehensive services tailored to your needs, ranging from consulting and strategy development to implementation and support.</p>
         </div>
 
         <div className="row justify-content-center">
           {/* Service 1: Big Data Analysis */}
           <SingleServiceItem
             title="Big Data Analysis"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua."
+            description="Analyze vast datasets to uncover patterns, trends, and insights that drive informed decision-making and strategic initiatives."
             icon={faDatabase}
           />
 
           {/* Service 2: Data Visualization */}
           <SingleServiceItem
             title="Data Visualization"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua."
+            description="Transform complex data into visually engaging representations to facilitate understanding and communication of insights."
             icon={faChartBar}
           />
 
           {/* Service 3: Data Governance */}
           <SingleServiceItem
             title="Data Governance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua."
+            description="Establish robust data governance frameworks to ensure data quality, integrity, and compliance across the organization."
             icon={faGavel}
           />
 

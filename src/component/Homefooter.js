@@ -24,18 +24,18 @@ const Footer = () => {
             <h5 style={{ fontSize: '1.2rem', marginBottom: '20px' }}>Company</h5>
             <ul className="list-unstyled footer-links">
               <li><a href="/about" style={linkStyle}>About Us</a></li>
-              <li><a href="/tools-technologies" style={linkStyle}>Tools & Technologies</a></li>
+              <li><a href="/Technology" style={linkStyle}>Technology</a></li>
               <li><a href="/services" style={linkStyle}>Services</a></li>
-              <li><a href="/careers" style={linkStyle}>Careers</a></li>
+              <li><a href="/Industries" style={linkStyle}>Industries</a></li>
             </ul>
           </div>
           <div className="col-md-3" style={{ textAlign: 'right', paddingTop: '10px', marginTop: '10px' }}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '20px' }}>Solutions</h3>
             <ul className="list-unstyled footer-links" style={{ listStyle: 'none', padding: '0' }}>
-              <li><a href="/" style={linkStyle}>Data Analytics</a></li>
-              <li><a href="/" style={linkStyle}>Product Engineering</a></li>
-              <li><a href="/" style={linkStyle}>Data Lakes</a></li>
-              <li><a href="/" style={linkStyle}>Cloud Transformation</a></li>
+              <li><a href="/Data Analytics" style={linkStyle}>Data Analytics</a></li>
+              <li><a href="/Data Engineering" style={linkStyle}>Data Engineering</a></li>
+              <li><a href="/SCM  »" style={linkStyle}>SCM</a></li>
+              <li><a href="/Cloud" style={linkStyle}>Cloud</a></li>
             </ul>
           </div>
           <div className="col-md-3" style={{ textAlign: 'right', paddingTop: '10px', marginTop: '10px' }}>

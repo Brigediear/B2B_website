@@ -49,9 +49,6 @@ const DiscoverSection = () => {
               in some form, by injected humour, or randomised words which don't look even slightly believable. If you are
               going to use a passage.
             </p>
-            <a className="btn btn-primary" href="/bigdata-analytics/#" style={{ color: '#ffffff' }}>
-              Discover More
-            </a>
           </div>
         </div>
       </div>

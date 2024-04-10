@@ -1,23 +1,100 @@
 import React from 'react';
+import Footer from './Homefooter';
 
-const AboutUs = () => {
+function AboutUsComponent() {
+  const styles = {
+    section: {
+      width: '100%',
+    },
+    aboutUsSection: {
+      background: '#760d39',
+      color: 'white',
+    },
+    whoWeAreSection: {
+      background: 'linear-gradient(135deg, #012353, #43e794)',
+      color: 'white', // Updated text color
+    },
+    imageContainer: {
+      position: 'relative',
+      height: '60vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    },
+    imageText: {
+      color: 'white',
+      fontSize: 'calc(12px + 3vmin)',
+      textAlign: 'left',
+    },
+    textContainer: {
+      padding: '20px',
+      textAlign: 'center',
+      maxWidth: '800px',
+      margin: '0 auto',
+    },
+    text: {
+      color: 'white', // Updated text color
+      textAlign: 'center',
+    },
+  };
+
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+    <div className='containerStyle' style={{ alignItems: 'center', backgroundColor: 'white' }}>
+    <div style={{ backgroundImage: "url('About.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+      <div style={{ color: 'white', fontSize: 'calc(12px + 3vmin)', textAlign: 'left' }}>
         <h1>About Us</h1>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div style={{ marginBottom: '40px' }}>
-          <h2 style={{ color: '#760d39', marginBottom: '10px' }}>Who We Are</h2>
-          <p style={{ lineHeight: '1.6' }}>Celebal Technologies is a premier software services company specializing in digital transformation and enterprise reinvention, delivering end-to-end results to clients across diverse sectors. Our dynamic suite of advanced solutions built on Generative AI, Machine Learning, Data Science, Industry Data Models, Infrastructure & Database Migration, SAP Extend & Innovate, App Modernization, and Enterprise Cloud Integration, positions us at the nexus of traditional enterprise systems and modern cloud innovation. With a global presence spanning the USA, India, APAC, UAE, Europe, and Canada, Celebal Technologies boasts a dedicated workforce of over 2000+ professionals that serve up an impressive client base, including 90% of Fortune 500 companies, guiding them through their transformative digital journeys.</p>
-        </div>
-        <div style={{ marginBottom: '40px' }}>
-          <h2 style={{ color: '#760d39', marginBottom: '10px' }}>Our Mission</h2>
-          <p style={{ lineHeight: '1.6' }}>Our mission is to make data simple and easy to understand for all organizations. We are committed to providing solutions powered by modern cloud and artificial intelligence that integrate with traditional enterprise software. Our tailor-made solutions help enterprises maximise productivity, improve speed and accuracy.</p>
+    </div>
+      {/* Who We Are Section */}
+      <div style={{ ...styles.section, ...styles.whoWeAreSection }}>
+        <div style={styles.textContainer}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ ...styles.circle, top: '-50px', left: '50px' }}>
+              <svg style={styles.svg} className="about-us_topvector__iX6GI" xmlns="http://www.w3.org/2000/svg" width="176" height="112" viewBox="0 0 176 112" fill="none">
+                <path d="M174.454 111.264L0.246582 110.191C1.24017 48.8377 79.7399 -0.388021 175.865 0.0727062L174.448 111.264" fill="#6F0934"></path>
+              </svg>
+            </div>
+            <div style={{ ...styles.circle, top: '-50px', right: '50px' }}>
+              <svg style={styles.svg} className="about-us_topvector__iX6GI" xmlns="http://www.w3.org/2000/svg" width="176" height="112" viewBox="0 0 176 112" fill="none">
+                <path d="M174.454 111.264L0.246582 110.191C1.24017 48.8377 79.7399 -0.388021 175.865 0.0727062L174.448 111.264" fill="#6F0934"></path>
+              </svg>
+            </div>
+          </div>
+          <h1 style={{ textAlign: 'center' }}>Who We Are</h1>
+          <p style={styles.text}>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ ...styles.circle, bottom: '-50px', left: '50px' }}>
+              <svg style={styles.svg} className="about-us_bottomvector__nKh54" xmlns="http://www.w3.org/2000/svg" width="201" height="139" viewBox="0 0 201 139" fill="none">
+                <path d="M0.513672 138.489V0C110.623 0.168209 199.825 62.069 200.061 138.484H0.513672" fill="#6F0934"></path>
+              </svg>
+            </div>
+            <div style={{ ...styles.circle, bottom: '-50px', right: '50px' }}>
+              <svg style={styles.svg} className="about-us_bottomvector__nKh54" xmlns="http://www.w3.org/2000/svg" width="201" height="139" viewBox="0 0 201 139" fill="none">
+                <path d="M0.513672 138.489V0C110.623 0.168209 199.825 62.069 200.061 138.484H0.513672" fill="#6F0934"></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
+	   <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ flex: 1, padding: '0 20px' }}>
+          <h2  style={{ textAlign: 'center' }}>Our Mission</h2>
+          <p>
+        
+Our mission is to simplify and enhance data comprehension for all organizations, encompassing data engineering and data management. We are dedicated to delivering solutions driven by cutting-edge cloud technology and artificial intelligence, seamlessly integrating with conventional enterprise software. Our customized solutions enable enterprises to optimize productivity, enhance speed, ensure accuracy, and effectively manage and engineer their data assets.
+          </p>
+        </div>
+        <div style={{ flex: 1, width: '50%' }}> {/* Adjusted width */}
+          <img src="mission.jpg" style={{ width: '100%', height: 'auto' }}/> {/* Adjusted image size */}
+        </div>
+      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
 
-export default AboutUs;
+export default AboutUsComponent;

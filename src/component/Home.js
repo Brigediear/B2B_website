@@ -180,7 +180,7 @@ const Home = () => {
                     <line x1="6" y1="18" x2="6.01" y2="18" />
                   </svg>
                   <h3>Analyze Your Data</h3>
-                  <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                  <p>Analyze the data systematically by conducting exploratory data analysis, identifying patterns, and deriving actionable insights to inform decision-making.</p>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
@@ -200,7 +200,7 @@ const Home = () => {
                     <polyline points="8 6 2 12 8 18" />
                   </svg>
                   <h3>Customized Plan</h3>
-                  <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                  <p>Develop a tailored data analysis plan by assessing specific objectives, identifying relevant data sources, and applying appropriate analytical techniques to derive actionable insights.</p>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
@@ -222,7 +222,7 @@ const Home = () => {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                   <h3>Implement Solution</h3>
-                  <p>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                  <p>Execute the solution by systematically deploying strategies, monitoring progress, and adapting approaches to achieve desired outcomes.</p>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@ const Home = () => {
             position: 'relative',
           }}
         >
-          {/* Preload next image */}a
+          {/* Preload next image */}
           {nextImage && (
             <img
               src={`${process.env.PUBLIC_URL}${nextImage}`}

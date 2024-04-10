@@ -82,7 +82,7 @@ const WhatWeDo = () => {
             ></div>
           </div>
           <div className="bar"></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Efficiently accomplish tasks by prioritizing objectives, optimizing processes, and fostering collaboration.</p>
         </div>
         <div className="row justify-content-center">
           {/* Data Analytics Section */}
@@ -93,7 +93,7 @@ const WhatWeDo = () => {
           >
             <div className="icon larger-icon">&#128161;</div>
             <h3><a href="/services/service-details/">Data Analytics</a></h3>
-            <p>Lorem ipsum dolor sit consectetur, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <p>Utilize data analytics to extract meaningful insights, inform decision-making, and drive business growth.</p>
           </div>
 
           {/* Technology Section */}
@@ -104,7 +104,7 @@ const WhatWeDo = () => {
           >
             <div className="icon larger-icon">&#9881;</div>
             <h3><a href="/services/service-details/">Technology</a></h3>
-            <p>Lorem ipsum dolor sit consectetur, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <p>Innovate and leverage technology to streamline processes, enhance efficiency, and empower progress.</p>
           </div>
         </div>
       </div>

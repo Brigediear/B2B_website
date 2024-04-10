@@ -20,6 +20,11 @@ import  ScmSatffing from './component/ScmStaffing';
 import Technology from './component/Technology';
 import Services from './component/Services';
 import SCM from './component/SCM';
+import Banking from './component/Banking';
+import Healthcare from './component/Healthcare';
+import Retail from './component/Retail';
+import Media from './component/Media & Entertainment';
+import Industries from './component/Industries';
 
 function App() {
   return (
@@ -60,7 +65,16 @@ function App() {
           {/* Add routes for other pages */}
           <Route path="/SCM  »" element={<SCM/>} />
           {/* Add routes for other pages */}
-
+          <Route path="/Banking" element={<Banking/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Healthcare" element={<Healthcare/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Retail" element={<Retail/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Media & Entertainment" element={<Media/>} />
+          {/* Add routes for other pages */}
+          <Route path="/Industries" element={<Industries/>} />
+          {/* Add routes for other pages */}
           </Routes>   
     </BrowserRouter>
     

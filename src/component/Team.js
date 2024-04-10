@@ -14,7 +14,7 @@ const Team = () => {
   useEffect(() => {
     // Mock data for team members
     const mockTeamMembers = [
-      { name: 'Vijay Patel', designation: 'VP', imageSrc: 'Vijay.png', description: 'Some description for Vijay Patel.' }
+      { name: 'Vijay Patel', designation: 'Sr. Vice President | Co-Founder', imageSrc: 'Vijay.png', description: 'Some description for Vijay Patel.' }
     ];
     setTeamMembers(mockTeamMembers);
   }, []);
@@ -134,7 +134,7 @@ const Team = () => {
       <style>{cssStyles}</style>
       <BlankPage />
       <div className="blank-page">
-        <h1 style={{ textAlign: 'center', color: '#000000', background: 'none', padding: 0 }}>Get To Know The Team</h1>
+        <h1 style={{ textAlign: 'center', color: '#000000', background: 'none', padding: 0 }}>Leadership</h1>
         <p style={{ textAlign: 'center', color: '#000000' }}>
          <h5> The team at BitTwoBye believes in empowering teams to deliver their most impactful work, by building a culture
           of innovation & growth, where everyone can thrive.</h5>
