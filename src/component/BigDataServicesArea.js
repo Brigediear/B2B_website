@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase, faChartBar, faGavel } from '@fortawesome/free-solid-svg-icons';
+import { faChartBar, faTools, faGavel,faFlask } from '@fortawesome/free-solid-svg-icons';
 
 // Define the styled component
 const ServiceItemWrapper = styled.div`
@@ -85,18 +85,18 @@ const BigDataServicesArea = () => {
         </div>
 
         <div className="row justify-content-center">
-          {/* Service 1: Big Data Analysis */}
+          {/* Service 1:  Data Analytics */}
           <SingleServiceItem
-            title="Big Data Analysis"
+            title="Data Analytics"
             description="Analyze vast datasets to uncover patterns, trends, and insights that drive informed decision-making and strategic initiatives."
-            icon={faDatabase}
+            icon={faChartBar}
           />
 
-          {/* Service 2: Data Visualization */}
+          {/* Service 2: Data Engineering */}
           <SingleServiceItem
-            title="Data Visualization"
-            description="Transform complex data into visually engaging representations to facilitate understanding and communication of insights."
-            icon={faChartBar}
+            title="Data Engineering"
+            description="Condense intricate data into visually engaging formats to simplify comprehension and streamline communication within Data Engineering."
+            icon={faTools}
           />
 
           {/* Service 3: Data Governance */}
@@ -104,6 +104,13 @@ const BigDataServicesArea = () => {
             title="Data Governance"
             description="Establish robust data governance frameworks to ensure data quality, integrity, and compliance across the organization."
             icon={faGavel}
+          />
+
+           {/* Service 3: Data Science */}
+           <SingleServiceItem
+            title="Data Science"
+            description="Develop rigorous data governance structures to maintain high standards of quality, integrity, and compliance throughout Data Science operations."
+            icon={faFlask}
           />
 
           {/* Add more services as needed */}

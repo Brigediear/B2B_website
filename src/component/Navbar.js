@@ -217,6 +217,27 @@ const Navbar = () => {
                       >
                         Data Engineering
                       </Dropdown.Item>
+
+                      <Dropdown.Item
+                        as={Link}
+                        to="/Data Governance"
+                        onMouseEnter={() => handleServicesItemHover('Data Governance')}
+                        onMouseLeave={handleServicesItemLeave}
+                        style={{ color: hoveredServicesItem === 'Data Governance' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
+                      >
+                        Data Governance
+                      </Dropdown.Item>
+
+                      <Dropdown.Item
+                        as={Link}
+                        to="/Data Science"
+                        onMouseEnter={() => handleServicesItemHover('Data Science')}
+                        onMouseLeave={handleServicesItemLeave}
+                        style={{ color: hoveredServicesItem === 'Data Science' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
+                      >
+                        Data Science
+                      </Dropdown.Item>
+
                       <Dropdown.Item
                         as={Link}
                         to="/SCM  »"
@@ -425,12 +446,12 @@ const Navbar = () => {
                     <li>
                       <Link
                         className="dropdown-item"
-                        to="/Team"
-                        onMouseEnter={() => handleCompanyItemHover('Team')}
+                        to="/Our Founder"
+                        onMouseEnter={() => handleCompanyItemHover('Our Founder')}
                         onMouseLeave={handleCompanyItemLeave}
-                        style={{ color: hoveredCompanyItem === 'Team' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
+                        style={{ color: hoveredCompanyItem === 'Our Founder' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
                       >
-                        Team
+                        Our Founder
                       </Link>
                     </li>
                     <li>

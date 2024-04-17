@@ -131,34 +131,39 @@ const Home = () => {
       {/* Banner Boxes */}
       <div ref={bannerRef} style={bannerBoxesStyle}>
         <div className="banner-boxes-container">
-          <style>
-            {`
-              .banner-boxes-container {
-                background-position: 50%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                padding-top: 280px;
-                padding-bottom: 25px;
-              }
+<style>
+  {`
+    .banner-boxes-container {
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 280px; /* Change this value to adjust the height */
+      padding-bottom: 25px;
+      display: flex;
+      justify-content: space-between; /* Align banner boxes horizontally */
+    }
 
-              .single-banner-boxes {
-                background-color: transparent;
-                border: 1px solid #ccc;
-                padding: 20px;
-                border-radius: 10px;
-                text-align: center;
-              }
+    .single-banner-boxes {
+      background-color: transparent;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1; /* Equal width for all banner boxes */
+      height: 100%; /* Set height to fill the container */
+    }
 
-              .single-banner-boxes:hover {
-                background: linear-gradient(135deg, #012353, #43e794);
-              }
+    .single-banner-boxes:hover {
+      background: linear-gradient(135deg, #012353, #43e794);
+    }
 
-              .single-banner-boxes:hover h3,
-              .single-banner-boxes:hover p {
-                color: #ffffff;
-              }
-            `}
-          </style>
+    .single-banner-boxes:hover h3,
+    .single-banner-boxes:hover p {
+      color: #ffffff;
+    }
+  `}
+</style>
+
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-4 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">

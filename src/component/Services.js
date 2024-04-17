@@ -15,11 +15,11 @@ const Service    = () => {
 </div>
 <div style={{fontSize:'19px'}}
         ><p>
-        "At Bittwobyte Technologies Pvt. Ltd., our specialized services encompass data engineering, supply chain management (SCM),
+        At Bittwobyte Technologies Pvt. Ltd., our specialized services encompass data engineering, supply chain management (SCM),
         cloud computing, and data analytics. With a focus on leveraging the latest technologies  
         and industry best practices, we provide tailored solutions to optimize your data infrastructure, streamline your supply chain operations, harness the
          power of cloud platforms, and unlock actionable insights from your data.<br></br> Partner with us to harness the full potential of your
-          data and technology investments, driving sustainable growth and innovation for your organization."
+          data and technology investments, driving sustainable growth and innovation for your organization.
         </p>
  
         </div>
@@ -27,7 +27,7 @@ const Service    = () => {
 <div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', columnGap: '7px',marginTop:'30px'  ,backgroundColor:'#F2F3F4 ',}}>
 <div style={{  marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
    
-<a href="URL" style={{ textDecoration: "none" }}>    
+<a href="Data Analytics" style={{ textDecoration: "none" }}>    
 <div className='Data-Exploration' style={{
     color: 'black',
     height: 'auto',
@@ -71,7 +71,7 @@ const Service    = () => {
 </div>
 <div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
    
-   <a href="URL" style={{ textDecoration: "none" }}>  
+   <a href="SCM  »" style={{ textDecoration: "none" }}>  
    <div className='Data-Exploration' style={{
     color: 'black',
     height: 'auto',
@@ -117,7 +117,7 @@ Transform your supply chain with our SCM solutions at BitTwoByte. Streamline ope
  
  
 <div style={{ padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
-<a href="URL" style={{ textDecoration: "none" }}>    
+<a href="Cloud" style={{ textDecoration: "none" }}>    
 <div className='Data-Exploration' style={{
     color: 'black',
     height: 'auto',
@@ -168,7 +168,8 @@ Elevate your business with our Cloud solutions at BitTwoByte. Harness the flexib
 <div style={{    padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
    
      
-<a href="URL" style={{ textDecoration: "none" }}>    
+<a href="/Data Engineering"  
+style={{ textDecoration: "none" }}>    
    
 <div className='Data-Exploration' style={{
     color: 'black',
@@ -194,7 +195,7 @@ Elevate your business with our Cloud solutions at BitTwoByte. Harness the flexib
         left: '0', // Align image to the left
         height: '40%', // Set height to half of the container
         width: '100%', // Set width to fill the container
-        backgroundImage:" url('engeenring.wedp.webp')", // Specify image URL
+        backgroundImage:" url('dataengineering.png')", // Specify image URL
         backgroundSize: 'cover', // Cover to fill the div
         backgroundPosition: 'center' // Center the image
     }}></div>

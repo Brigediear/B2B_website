@@ -14,10 +14,10 @@ const Industries    = () => {
 </div>
 </div>
 
-<div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', columnGap: '1px',marginTop:'30px'  ,backgroundColor:'#F2F3F4 ',}}>
+<div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', columnGap: '1px',marginTop:'20px'  ,backgroundColor:'#F2F3F4 ',}}>
 <div style={{  marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
-<a href="URL" style={{ textDecoration: "none" }}>    
+<a href="Retail" style={{ textDecoration: "none" }}>    
 <div className='Data-Exploration' style={{ 
     color: 'black', 
     height: 'auto', 
@@ -42,7 +42,7 @@ const Industries    = () => {
         left: '0', // Align image to the left
         height: '40%', // Set height to half of the container
         width: '100%', // Set width to fill the container
-        backgroundImage:" url('retail.jpg')", // Specify image URL
+        backgroundImage:" url('RETAILL.png')", // Specify image URL
         backgroundSize: 'cover', // Cover to fill the div
         backgroundPosition: 'center' // Center the image
     }}></div>
@@ -61,7 +61,7 @@ const Industries    = () => {
 </div>
 <div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
-   <a href="URL" style={{ textDecoration: "none" }}>   
+   <a href="Media & Entertainment" style={{ textDecoration: "none" }}>   
    <div className='Data-Exploration' style={{ 
     color: 'black', 
     height: 'auto', 
@@ -86,7 +86,7 @@ const Industries    = () => {
         left: '0', // Align image to the left
         height: '40%', // Set height to half of the container
         width: '100%', // Set width to fill the container
-        backgroundImage:" url('Media and entertainment.webp')", // Specify image URL
+        backgroundImage:" url('Media and entertainment.jpg')", // Specify image URL
         backgroundSize: 'cover', // Cover to fill the div
         backgroundPosition: 'center' // Center the image
     }}></div>
@@ -108,7 +108,7 @@ Media and entertainment encompass content creation, production, and distribution
 
 
 <div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
-<a href="URL" style={{ textDecoration: "none" }}>     
+<a href="Banking" style={{ textDecoration: "none" }}>     
 <div className='Data-Exploration' style={{ 
     color: 'black', 
     height: 'auto', 
@@ -159,7 +159,7 @@ Banking offers financial services like deposits, playing a vital role in the eco
 <div style={{    padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
       
-<a href="URL" style={{ textDecoration: "none" }}>     
+<a href="Healthcare" style={{ textDecoration: "none" }}>     
     
 <div className='Data-Exploration' style={{ 
     color: 'black', 
@@ -185,7 +185,7 @@ Banking offers financial services like deposits, playing a vital role in the eco
         left: '0', // Align image to the left
         height: '40%', // Set height to half of the container
         width: '100%', // Set width to fill the container
-        backgroundImage:" url('healthcare.jpg')", // Specify image URL
+        backgroundImage:" url('health.jpg')", // Specify image URL
         backgroundSize: 'cover', // Cover to fill the div
         backgroundPosition: 'center' // Center the image
     }}></div>

@@ -1,140 +1,412 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Footer from './Homefooter';
-
 const DataAnalyticsService = () => {
-  return (
-    <div className='container-fluid' style={{ backgroundColor: 'white' }}>
-      <div className='row'>
-        <div className='col-md-12'>
-          <div
-            className='bg-primary text-white text-center p-5'
-            style={{ backgroundImage: "url('dataAnalyticshome.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat',height: '350px' }}
-          >
-            <div className='h1'>
-              Data Analytics <br />& Intelligence
+    const pathRef1 = useRef(null);
+    const pathRef2 = useRef(null);
+    const pathRef3 = useRef(null);
+    const pathRef4 = useRef(null);
+    const pathRef5 = useRef(null);
+    const [isHovered1, setIsHovered1] = useState(false);
+    const [isHovered2, setIsHovered2] = useState(false);
+    const [isHovered3, setIsHovered3] = useState(false);
+    const [isHovered4, setIsHovered4] = useState(false);
+    const [isHovered5, setIsHovered5] = useState(false);
+
+    const handleMouseEnter = (e, pathRef, setIsHovered) => {
+        setIsHovered(true);
+        e.currentTarget.style.background = 'linear-gradient(135deg, #43e794 , #012353)';
+        const path = pathRef.current;
+        if (path) {
+            path.style.transition = 'none'; // Disable transition for continuous drawing
+            path.style.strokeDashoffset = '1000'; // Reset strokeDashoffset to its initial value
+            setTimeout(() => {
+                path.style.transition = 'stroke-dashoffset 4.5s ease-in-out'; // Re-enable transition after a short delay
+                path.style.strokeDashoffset = '0'; // Start drawing animation
+            }, 50); // Short delay to ensure transition is disabled before resetting strokeDashoffset
+        }
+    };
+
+    const handleMouseLeave = (e, pathRef, setIsHovered) => {
+        setIsHovered(false);
+        e.currentTarget.style.background = 'linear-gradient(#CBC3E3, #E6E6FA)';
+        const path = pathRef.current;
+        if (path) {
+            path.style.transition = 'stroke-dashoffset 0.5s ease-in-out';
+            path.style.strokeDashoffset = '1000';
+        }
+    };
+
+    return (
+        <div className='containerStyle' style={{ alignItems: 'center', backgroundColor: 'white' ,width:'auto'}}>
+            <div style={{ 
+                backgroundImage: "url('data analytics.jpg')", 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center', 
+                backgroundRepeat: 'no-repeat', 
+                height: '60vh',
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                flexDirection: 'column' 
+            }}>
+                <div style={{ color: 'white', fontSize: 'calc(12px + 2vmin)', marginRight: '700px', textAlign: 'left', marginLeft: 'auto',  }}>
+                    <h1>Data Analytics <br></br>& Intelligence</h1>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='row mt-5'>
-        <div className='col-md-12'>
-          <p className='text-center'>
-            Unlock the Power of Your Data with Our Advanced Analytics Solutions
-            At BitTwoByte, we understand the critical role that data plays in today's business landscape.
-            Our Data Analytics services empower organizations to harness the full potential of their data,
-            transforming raw information into valuable insights.
-            Whether you're looking to optimize operations, improve decision-making processes,
-            or gain a competitive edge, our expert team is here to guide you through the world of data analytics.
-          </p>
-        </div>
-      </div>
-
-      <div className='row mt-5'>
-        <div className='col-md-12 text-center'>
-          <h2>Our Data Analytics Capabilities</h2>
-        </div>
-
-        <div className='col-md-4 mt-3'>
-          <div className='card mb-4'style={{ border: '10px solid #02133805', backgroundColor: 'lightblue', transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'lightblue'; }}>
-            <div className='card-body'>
-              <h3 className='card-title'>Data Exploration and Visualization</h3>
-              <p className='card-text'>Navigate through your data with ease using our advanced exploration and visualization. We help you uncover patterns, trends, and outliers, providing a clear and comprehensive view of your data landscape.</p>
+                
+            <div style={{ marginTop: '50px', fontSize: '20px', height: 'auto' }}>
+                <p>
+                    Unlock the Power of Your Data with Our Advanced Analytics Solutions
+                    At BitTwoByte, we understand the critical role that data plays in today's business landscape. <br />
+                    Our Data Analytics services empower organizations to harness the full potential of their data, transforming raw information into valuable insights.<br />
+                    Whether you're looking to optimize operations, improve decision-making processes, or gain a competitive edge, our expert team is here to guide you through the world of data analytics.
+                </p>
             </div>
-          </div>
-        </div>
-
-        <div className='col-md-4 mt-3'>
-          <div className='card mb-4'style={{ border: '27px solid #02133805', backgroundColor: 'lightblue', transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'lightblue'; }}>
-            <div className='card-body'>
-              <h3 className='card-title'>Predictive Analytics</h3>
-              <p className='card-text'>Stay ahead of the curve by leveraging predictive analytics. Our models analyze historical data to forecast future trends, enabling you to make informed decisions and proactively respond to changing market conditions.</p>
+           
+            <div style={{  marginTop: '30px', padding: '0 10px', fontSize: 'calc(8px + 4vmin)', fontStyle: 'normal' ,color:'#012353 ',textAlign:'center' }}>
+                <h2>Our Data Analytics Capabilities</h2>
             </div>
-          </div>
-        </div>
 
-        <div className='col-md-4 mt-3'>
-          <div className='card mb-4' style={{ border: '27px solid #02133805', backgroundColor: 'lightblue', transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'lightblue'; }}>
-            <div className='card-body'>
-              <h3 className='card-title'>Real-time Analytics</h3>
-              <p className='card-text'>React promptly to changing conditions with our real-time analytics capabilities. Monitor key metrics in real-time, enabling quick and agile decision-making to capitalize on emerging opportunities.</p>
+            <div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center' }}>
+                {/* First Box */}
+                <div 
+    className='Data-Exploration' 
+    style={{ 
+        color: 'black', 
+        height: 'auto', 
+        width: '40vmin', 
+        padding: '10px', 
+        fontSize: '20px',
+        borderBottom: '1px solid #02133805', 
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)', 
+        borderRadius: '10px', 
+        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+        position: 'relative',
+        overflow: 'hidden' ,
+        transition: 'background-color 0.3s ease', // Added transition for smooth color change
+        marginLeft: '50px', // Add margin between the boxes
+    }} 
+    onMouseEnter={(e) => handleMouseEnter(e, pathRef1, setIsHovered1)} 
+    onMouseLeave={(e) => handleMouseLeave(e, pathRef1, setIsHovered1)}
+>
+    <svg
+        className="draw-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        {/* Replace the path with the SVG data for the desired icon (data mining) */}
+        <path
+            ref={pathRef1}
+            d="M12 14l9-5-9-5-9 5 9 5z"
+            strokeDasharray={isHovered1 ? "1000" : "0"} // Change strokeDasharray based on hover state
+            strokeDashoffset={isHovered1 ? "0" : "1000"} // Change strokeDashoffset based on hover state
+        />
+    </svg>
+
+    <div style={{ 
+        textAlign: 'center',
+        position: 'relative',
+        top: isHovered1 ? '-14px' : '0', // Adjust the value to move the text up or down
+        transition: 'top 0.3s ease', // Adding transition for smooth movement
+    }}> 
+        <h3>Data Exploration and Visualization</h3>
+        <p>Navigate through your data with ease using our advanced exploration and visualization. We help you uncover patterns, trends, and outliers, providing a clear and comprehensive view of your data landscape.</p>
+    </div>
+</div>
+
+
+                {/* Second Box */}
+                <div 
+    className='Data-Exploration' 
+    style={{ 
+        color: 'black', 
+        height: 'auto', 
+        width: '40vmin', 
+        padding: '10px', 
+        fontSize: '20px',
+        borderBottom: '1px solid #02133805', 
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)', 
+        borderRadius: '10px', 
+        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+        position: 'relative',
+        overflow: 'hidden' ,
+        transition: 'background-color 0.3s ease', // Added transition for smooth color change
+        marginLeft: '50px', // Add margin between the boxes
+    }} 
+    onMouseEnter={(e) => handleMouseEnter(e, pathRef2, setIsHovered2)} 
+    onMouseLeave={(e) => handleMouseLeave(e, pathRef2, setIsHovered2)}
+>
+    <svg
+        className="draw-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        {/* Replace the path with the SVG data for the chart-monotone icon */}
+        <path
+            ref={pathRef2}
+            d="M21 6.75v10.5M17.25 19.5V4.5M12 17.25V2.25M7.5 14.25v-8.5M3 12h18"
+            strokeDasharray={isHovered2 ? "1000" : "0"} // Change strokeDasharray based on hover state
+            strokeDashoffset={isHovered2 ? "0" : "1000"} // Change strokeDashoffset based on hover state
+        />
+    </svg>
+
+    <div style={{ 
+        textAlign: 'center',
+        position: 'relative',
+        top: isHovered2 ? '-14px' : '0', // Adjust the value to move the text up or down
+        transition: 'top 0.3s ease', // Adding transition for smooth movement
+    }}> 
+        <h3>Predictive Analytics</h3>
+        <p>Stay ahead of the curve by leveraging predictive analytics. Our models analyze historical data to forecast future trends, enabling you to make informed decisions and proactively respond to changing market conditions.</p>
+    </div>
+</div>
+
+
+                {/* Third Box */}
+                <div 
+    className='Data-Exploration' 
+    style={{ 
+        color: 'black', 
+        height: 'auto', 
+        width: '40vmin', 
+        padding: '10px', 
+        fontSize: '20px',
+        borderBottom: '1px solid #02133805', 
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)', 
+        borderRadius: '10px', 
+        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+        position: 'relative',
+        overflow: 'hidden' ,
+        transition: 'background-color 0.3s ease', // Added transition for smooth color change
+        marginLeft: '50px', // Add margin between the boxes
+    }} 
+    onMouseEnter={(e) => handleMouseEnter(e, pathRef3, setIsHovered3)} 
+    onMouseLeave={(e) => handleMouseLeave(e, pathRef3, setIsHovered3)}
+>
+    <svg
+        className="draw-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        {/* New icon: Bar chart */}
+        <rect x="4" y="4" width="16" height="16" />
+        {/* Drawing effect */}
+        <polyline 
+            points={isHovered3 ? "12 6 12 12 16 14" : "12 6 12 6 12 6"}
+            style={{
+                strokeDasharray: "100",
+                strokeDashoffset: isHovered3 ? "0" : "100",
+                transition: "stroke-dashoffset 1s ease",
+            }}
+        />
+    </svg>
+
+    <div style={{ 
+        textAlign: 'center',
+        position: 'relative',
+        top: isHovered3 ? '-14px' : '0', // Adjust the value to move the text up or down
+        transition: 'top 0.7s ease', // Adding transition for smooth movement
+    }}> 
+        <h3>Real-time Analytics</h3>
+        <p>React promptly to changing conditions with our real-time analytics capabilities. Monitor key metrics in real-time, enabling quick and agile decision-making to capitalize on emerging opportunities.</p>
+    </div>
+</div>
+
+<div 
+    className='Data-Exploration' 
+    style={{ 
+        color: 'black', 
+        height: 'auto', 
+        width: '40vmin', 
+        padding: '10px', 
+        fontSize: '20px',
+        borderBottom: '1px solid #02133805', 
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)', 
+        borderRadius: '10px', 
+        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+        position: 'relative',
+        overflow: 'hidden' ,
+        transition: 'background-color 0.3s ease', // Added transition for smooth color change
+        marginLeft: '220px', // Add margin between the boxes
+        marginTop: '30px' // Add margin top for spacing
+    }}
+    onMouseEnter={(e) => handleMouseEnter(e, pathRef4, setIsHovered4)} 
+    onMouseLeave={(e) => handleMouseLeave(e, pathRef4, setIsHovered4)}
+>
+    <svg
+        className="draw-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path
+            ref={pathRef4}
+            d="M5 12h5l2 7 2-7h5"
+            strokeDasharray={isHovered4 ? "1000" : "0"} // Change strokeDasharray based on hover state
+            strokeDashoffset={isHovered4 ? "0" : "1000"} // Change strokeDashoffset based on hover state
+        />
+    </svg>
+
+    <div style={{ 
+        textAlign: 'center',
+        position: 'relative',
+        top: isHovered4 ? '-14px' : '0', // Adjust the value to move the text up or down
+        transition: 'top 0.3s ease', // Adding transition for smooth movement
+    }}> 
+        <h3>
+           Data Mining {/* Replace 'FaChartLine' with the desired Font Awesome icon */}
+        </h3>
+        <p>Unearth hidden knowledge within your data through our data mining expertise. Identify patterns, correlations, and valuable information that may be overlooked, driving strategic decision-making.</p>
+    </div>
+</div>
+
+
+
+<div 
+    className='Data-Exploration' 
+    style={{ 
+        color: 'black', 
+        height: 'auto', 
+        width: '40vmin', 
+        padding: '10px', 
+        fontSize: '20px',
+        borderBottom: '1px solid #02133805', 
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)', 
+        borderRadius: '10px', 
+        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+        position: 'relative',
+        overflow: 'hidden' ,
+        transition: 'background-color 0.3s ease', // Added transition for smooth color change
+        marginLeft: '50px', // Add margin between the boxes
+        marginTop: '30px' // Add margin top for spacing
+    }} 
+    onMouseEnter={(e) => handleMouseEnter(e, pathRef5, setIsHovered5)} 
+    onMouseLeave={(e) => handleMouseLeave(e, pathRef5, setIsHovered5)}
+>
+    <svg
+        className="draw-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="100"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <circle cx="12" cy="12" r="10" strokeDasharray={isHovered5 ? "1000" : "0"} strokeDashoffset={isHovered5 ? "0" : "1000"} ref={pathRef5} />
+    </svg>
+
+    <div style={{ 
+        textAlign: 'center',
+        position: 'relative',
+        top: isHovered5 ? '-14px' : '0', // Adjust the value to move the text up or down
+        transition: 'top 0.3s ease', // Adding transition for smooth movement
+    }}> 
+        <h3>Prescriptive Analytics</h3>
+        <p>Move beyond predicting outcomes with our prescriptive analytics solutions. We provide actionable insights and recommendations, guiding you on the optimal course of action to achieve your business objectives.</p>
+    </div>
+</div>
+
+
+
+
+                <div style={{ backgroundSize: '10px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h1>Why Choose Us for Data Analytics?</h1>
+          </div>
+
+
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}>
+  
+  <div className='heading' style={{ fontSize: '6px',
+   color: '#000000', border: '3px solid #f5f4f375',
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
+    <div>
+      <h2>Expertise</h2>
+    </div>
+    <div style={{ width:'50%' }}>
+      <p>Our team of skilled data analysts and scientists brings a wealth of experience to the table, ensuring the success of your analytics projects.</p>
+    </div>
+  </div>
+  
+</div>
+
+
+
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+            <div className='heading' style={{ fontSize: '6px',
+   color: '#000000', border: '3px solid #f5f4f375',
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+              <h2>Custom Solutions </h2>
+              <div style={{ width:'50%' }}>
+              <p>Understand that each business is unique. Our tailored analytics solutions align with your specific goals and challenges.</p>
+            </div> </div>
+          </div>
+
+
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+            <div className='heading' style={{ fontSize: '6px',
+   color: '#000000', border: '3px solid #f5f4f375',
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+              <h2>Scalability</h2>
+              <div style={{width:'50%'}}> 
+              <p>Whether you're a startup or an enterprise, our scalable solutions grow with your business, adapting to evolving data needs.</p>
+            </div></div>
+          </div>
+
+
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+            <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+              <h2>Data Security</h2>
+              <div style={{width:'50%'}}>
+              <p>Trust is paramount in the data domain. Rest assured, our robust security measures protect your data assets, maintaining confidentiality and integrity.</p>
+            </div></div>
+          </div>
+
+
+          <div style={{ marginTop: '30px', backgroundColor: '#012353', padding: '20px 10px', fontSize: 'calc(10px + 2vmin)', textAlign: 'center', color: '#34495E ' }}>
+            <div style={{ color: 'white', fontSize: '40px', textAlign: 'center', margin: '0 100px' }}>
+              Transform your data into actionable insights with us
             </div>
-          </div>
-        </div>
-
-        <div className='col-md-4 mt-3'>
-          <div className='card mb-4' style={{ border: '27px solid #02133805', backgroundColor: 'lightblue', transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'lightblue'; }}>
-            <div className='card-body'>
-              <h3 className='card-title'>Data Mining</h3>
-              <p className='card-text'>Unearth hidden knowledge within your data through our data mining expertise. Identify patterns, correlations, and valuable information that may be overlooked, driving strategic decision-making.</p>
+            <div style={{ color:'white', fontSize: '20px', textAlign: 'center', margin: '1px 100px' }}>
+              <div style={{ marginTop:'5px', fontSize: '30px',}}>
+                Where innovation meets analytics 
+              </div>
+              <br />
+              Contact us today to embark on your data-driven journey.
             </div>
-          </div>
-        </div>
 
-        <div className='col-md-4 mt-3'>
-          <div className='card mb-4' style={{ border: '27px solid #02133805', backgroundColor: 'lightblue', transition: 'background-color 0.3s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'lightblue'; }}>
-            <div className='card-body'>
-              <h3 className='card-title'>Prescriptive Analytics</h3>
-              <p className='card-text'>Move beyond predicting outcomes with our prescriptive analytics solutions. We provide actionable insights and recommendations, guiding you on the optimal course of action to achieve your business objectives.</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className='row mt-5'>
-        <div className='col-md-12 text-center'>
-          <h2>Why Choose Us for Data Analytics?</h2>
-        </div>
-
-        <div className='col-md-6 mt-3'>
-          <div className='card mb-4'style={{ border: '3px solid #f5f4f375', transition: 'background-color 0.2s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
-            <div className='card-body'>
-              <h5 className='card-title'>Expertise</h5>
-              <p className='card-text'>Our team of skilled data analysts and scientists brings a wealth of experience to the table, ensuring the success of your analytics projects.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='col-md-6 mt-3'>
-          <div className='card mb-4'style={{ border: '3px solid #f5f4f375', transition: 'background-color 0.2s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
-            <div className='card-body'>
-              <h5 className='card-title'>Custom Solutions</h5>
-              <p className='card-text'>Understand that each business is unique. Our tailored analytics solutions align with your specific goals and challenges.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='col-md-6 mt-3'>
-          <div className='card mb-4'style={{ border: '3px solid #f5f4f375', transition: 'background-color 0.2s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
-            <div className='card-body'>
-              <h5 className='card-title'>Scalability</h5>
-              <p className='card-text'>Whether you're a startup or an enterprise, our scalable solutions grow with your business, adapting to evolving data needs.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className='col-md-6 mt-3'>
-          <div className='card mb-4'style={{ border: '3px solid #f5f4f375', transition: 'background-color 0.2s ease' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
-            <div className='card-body'>
-              <h5 className='card-title'>Data Security</h5>
-              <p className='card-text'>Trust is paramount in the data domain. Rest assured, our robust security measures protect your data assets, maintaining confidentiality and integrity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container-fluid" style={{ backgroundColor: '#012353', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: 'auto', padding: '-1vw 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div className="text-white" style={{ fontSize: '2.5vw', textAlign: 'center', fontStyle: 'lora', margin: '0 5vw' }}>
-          Transform your data into actionable insights with us
-        </div>
-        <div className="text-white" style={{ fontSize: '1.5vw', textAlign: 'center', margin: '1vw 5vw' }}>
-          <div style={{ fontSize: '2.5vw', marginTop: '1vw' }}>
-            Where innovation meets analytics
-          </div>
-          <br />
-          Contact us today to embark on your data-driven journey.
-        </div>
-        <div className="text-center">
+             <div className="text-center">
         <a href="/contact" className="btn btn-light btn-lg"
           style={{
             padding: '1vw 2vw',
@@ -153,10 +425,16 @@ const DataAnalyticsService = () => {
           Let's Talk
         </a>
         </div>
-      </div>
-      <Footer />
+
+
+          </div>
+        </div>
     </div>
+	  <Footer />
+    </div>
+   
   );
 };
+
 
 export default DataAnalyticsService;
