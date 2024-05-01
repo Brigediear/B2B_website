@@ -237,7 +237,8 @@ const Healthcare = () => {
         position: 'relative',
         overflow: 'hidden' ,
         transition: 'background-color 0.3s ease', // Added transition for smooth color change
-        marginLeft: '50px', // Add margin between the boxes
+        marginLeft: '220px', // Add margin between the boxes
+         marginright: '40px', 
         marginTop:'20px'
     }}
     onMouseEnter={(e) => handleMouseEnter(e, pathRef4, setIsHovered4)} 
@@ -294,6 +295,7 @@ const Healthcare = () => {
         overflow: 'hidden' ,
         transition: 'background-color 0.3s ease', // Added transition for smooth color change
         marginLeft: '20px', // Add margin between the boxes
+         marginRight: '160px',
         marginTop:'20px'
     }} 
     onMouseEnter={(e) => handleMouseEnter(e, pathRef5, setIsHovered5)} 
@@ -340,7 +342,7 @@ const Healthcare = () => {
 
                 <div style={{ backgroundSize: '10px' }}>
           <div style={{ textAlign: 'center' }}>
-          <h1> Why Choose BITTWOBYTE?</h1>
+          <h1> Why Choose Us for  Healthcare?</h1>
           </div>
 
 
@@ -348,7 +350,7 @@ const Healthcare = () => {
   
   <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
     <div>
     <h2>Deep Industry Understanding</h2>    </div>
     <div style={{ width:'50%' }}>
@@ -360,10 +362,10 @@ const Healthcare = () => {
 
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
             <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
           <h2>End-to-End Solutions</h2>
               <div style={{ width:'50%' }}>
               <p>From initial assessment to ongoing support, we offer end-to-end data management solutions tailored to your organization's specific needs and objectives.</p>
@@ -371,10 +373,10 @@ const Healthcare = () => {
           </div>
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
             <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
           <h2>Focus on Quality and Timeliness</h2>
               <div style={{width:'50%'}}> 
               <p>We prioritize quality delivery within promised timelines, ensuring that our solutions meet the highest standards of excellence and reliability.</p>
@@ -382,8 +384,8 @@ const Healthcare = () => {
           </div>
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
-            <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+            <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
             <h2>Innovation and Expertise</h2>
               <div style={{width:'50%'}}>
               <p>Our team of skilled professionals stays at the forefront of technological advancements and industry trends, continuously innovating to deliver best-in-class solutions.</p>

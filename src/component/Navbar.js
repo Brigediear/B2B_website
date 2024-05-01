@@ -344,8 +344,11 @@ const Navbar = () => {
                   style={{ position: 'relative', marginRight: '20px', marginLeft: 'auto' }}
                 >
                   <Link
-                    className={`nav-link ${showIndustriesDropdown ? 'active' : ''}`}
+                    className={`nav-link dropdown-toggle ${showIndustriesDropdown ? 'active' : ''}`}
                     to="/Industries"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                     style={{
                       position: 'relative',
                       zIndex: 1,
@@ -420,8 +423,11 @@ const Navbar = () => {
                   style={{ position: 'relative', marginRight: '20px', marginLeft: 'auto' }}
                 >
                   <Link
-                    className={`nav-link ${showCompanyDropdown ? 'active' : ''}`}
+                    className={`nav-link dropdown-toggle ${showCompanyDropdown ? 'active' : ''}`}
                     to="/company"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                     style={{
                       position: 'relative',
                       zIndex: 1,
@@ -452,17 +458,6 @@ const Navbar = () => {
                         style={{ color: hoveredCompanyItem === 'Our Founder' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
                       >
                         Our Founder
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to="/Newsroom"
-                        onMouseEnter={() => handleCompanyItemHover('Newsroom')}
-                        onMouseLeave={handleCompanyItemLeave}
-                        style={{ color: hoveredCompanyItem === 'Newsroom' ? '#00b300' : dropdownItemColor, ...dropdownItemStyle }}
-                      >
-                        Newsroom
                       </Link>
                     </li>
                   </ul>

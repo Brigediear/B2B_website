@@ -249,6 +249,7 @@ const DataAnalyticsService = () => {
         overflow: 'hidden' ,
         transition: 'background-color 0.3s ease', // Added transition for smooth color change
         marginLeft: '220px', // Add margin between the boxes
+        marginright: '100px', // Add margin between the boxes
         marginTop: '30px' // Add margin top for spacing
     }}
     onMouseEnter={(e) => handleMouseEnter(e, pathRef4, setIsHovered4)} 
@@ -305,6 +306,7 @@ const DataAnalyticsService = () => {
         overflow: 'hidden' ,
         transition: 'background-color 0.3s ease', // Added transition for smooth color change
         marginLeft: '50px', // Add margin between the boxes
+        marginright: '80px',
         marginTop: '30px' // Add margin top for spacing
     }} 
     onMouseEnter={(e) => handleMouseEnter(e, pathRef5, setIsHovered5)} 

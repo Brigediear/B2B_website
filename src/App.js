@@ -7,7 +7,6 @@ import About from './component/About';
 import Team from './component/Team';
 import Contact from './component/Contact';
 import Careers from './component/Careers';
-import Newsroom from './component/Newsroom';
 import Home from './component/Home';
 import DataAnalyticsService from './component/DataAnalyticsService';
 import CloudService from './component/CloudService';
@@ -27,7 +26,7 @@ import Healthcare from './component/Healthcare';
 import Retail from './component/Retail';
 import Media from './component/Media & Entertainment';
 import Industries from './component/Industries';
-
+import Manufacturing from './component/Manufacturing';
 function App() {
   return (
     <BrowserRouter>
@@ -39,7 +38,6 @@ function App() {
         <Route path="/Our Founder" element={<Team />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Careers" element={<Careers />} />
-        <Route path="/Newsroom" element={<Newsroom />} />
         <Route path="/Data Analytics" element={<DataAnalyticsService />} />
         <Route path="/Cloud" element={<CloudService />} />
         <Route path="/Data Engineering" element={<DataEngineeringService />} />
@@ -56,6 +54,7 @@ function App() {
         <Route path="/Banking" element={<Banking />} />
         <Route path="/Healthcare" element={<Healthcare />} />
         <Route path="/Retail" element={<Retail />} />
+        <Route path="/Manufacturing" element={<Manufacturing />} />
         <Route path="/Media & Entertainment" element={<Media />} />
         <Route path="/Industries" element={<Industries />} />
       </Routes>

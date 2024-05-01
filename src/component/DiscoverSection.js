@@ -45,9 +45,7 @@ const DiscoverSection = () => {
           <div className="discover-content">
             <h2 style={{ color: '#ffffff' }}>Engaging New Audiences through Smart Approach</h2>
             <p style={{ color: '#ffffff' }}>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you are
-              going to use a passage.
+            Captivate and enchant burgeoning audiences with masterful finesse, intricately weaving connections through insightful engagement.
             </p>
           </div>
         </div>

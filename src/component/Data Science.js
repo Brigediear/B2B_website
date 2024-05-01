@@ -1,244 +1,319 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Footer from './Homefooter';
 
-const  DataScience = () => {
-  return (
-    <div className='containerStyle' style={{ alignItems: 'center', backgroundColor: 'white' }}>
-    <div style={{ backgroundImage: "url('dataengineering.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: '50vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-    <div style={{ color: 'white', fontSize: 'calc(12px + 3vmin)', marginRight: '1100px', textAlign: 'left', marginLeft: 'auto', }}>
-  <h1>Data Engineering</h1>
-</div>
+const DataScienceService = () => {
+    const pathRef1 = useRef(null);
+    const pathRef2 = useRef(null);
+    const pathRef3 = useRef(null);
+    const pathRef4 = useRef(null);
+    const pathRef5 = useRef(null);
+    const [isHovered1, setIsHovered1] = useState(false);
+    const [isHovered2, setIsHovered2] = useState(false);
+    const [isHovered3, setIsHovered3] = useState(false);
+    const [isHovered4, setIsHovered4] = useState(false);
+    const [isHovered5, setIsHovered5] = useState(false);
 
-      </div>
+    const handleMouseEnter = (e, pathRef, setIsHovered) => {
+        setIsHovered(true);
+        e.currentTarget.style.background = 'linear-gradient(135deg, #43e794 , #012353)';
+        const path = pathRef.current;
+        if (path) {
+            path.style.transition = 'none';
+            path.style.strokeDashoffset = '1000';
+            setTimeout(() => {
+                path.style.transition = 'stroke-dashoffset 4.5s ease-in-out';
+                path.style.strokeDashoffset = '0';
+            }, 50);
+        }
+    };
 
-      <div style={{ marginTop: '30px', padding: '0 10px', fontSize: 'calc(5px + 2vmin)',fontStyle:'forum '  }}>
-        <p>
-        Unleash the potential of your business with Bittwobyte Technologies Pvt. Ltd.'s innovative data engineering solutions.
-         Our comprehensive suite of data engineering tools and services is designed to streamline data processes, optimize data pipelines, and maximize the value of your data assets.
-          From data ingestion and storage to data transformation and integration, our expert team specializes in building robust data architectures tailored to your specific needs.
-        </p>
-      </div>
+    const handleMouseLeave = (e, pathRef, setIsHovered) => {
+        setIsHovered(false);
+        e.currentTarget.style.background = 'linear-gradient(#CBC3E3, #E6E6FA)';
+        const path = pathRef.current;
+        if (path) {
+            path.style.transition = 'stroke-dashoffset 0.5s ease-in-out';
+            path.style.strokeDashoffset = '1000';
+        }
+    };
 
-      <div style={{ backgroundColor: 'white', marginTop: '30px', padding: '0 10px', fontSize: 'calc(10px + 1vmin)', textAlign: 'center' }}>
-        <h1>Our Data Engineering Solutions</h1>
-      </div>
-
-   
-      
-     
-<div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', columnGap: '1px',marginTop:'30px'  ,backgroundColor:'#F2F3F4 ',}}>
-<div style={{  marginTop: '10px', padding: '20px', height: '80vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
-    
-      
-<div 
-className='Data-Exploration'
-style={{ 
-color: 'black', 
-height: '68vh', 
-width: '48vmin',
-padding: '40px', 
-fontSize:'20px',
-borderBottom: '1px solid #02133805', // Set bottom border
-backgroundColor: 'white',  
-}}
-onMouseOver={(e) => { e.currentTarget.style.borderBottom = '2px solid #43e794'; }}
-onMouseOut={(e) => { e.currentTarget.style.borderBottom = '2px solid #02133805'; }}>
-<div style={{
-    backgroundImage: "url('predictive.jpg')",
-    backgroundSize: '50px',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '20vh',
-    border: 'red',
-    borderRadius: '500px',
-    
-    }}>
-</div>
-<div style={{fontSize: 'calc(10px + 1vmin)'}}>
-    <h3>Data Ingestion</h3>
-    <p>Seamlessly collect data from various sources, including databases, APIs, and streaming platforms, to fuel your analytics initiatives.</p>
-</div>
-
-</div>
-
-</div>
-<div style={{ marginTop: '10px', padding: '20px', height: '90vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
-    
-<div 
-className='Data-Exploration'
-style={{ 
-color: 'black', 
-height: '68vh', 
-width: '48vmin',
-padding: '40px', 
-fontSize:'20px',
-borderBottom: '1px solid #02133805', // Set bottom border
-backgroundColor: 'white',  
-}}
-onMouseOver={(e) => { e.currentTarget.style.borderBottom = '2px solid #43e794'; }}
-onMouseOut={(e) => { e.currentTarget.style.borderBottom = '2px solid #02133805'; }}>
-<div style={{  backgroundImage: "url('datavisual.jpg')", 
-backgroundSize: '70px',
-backgroundPosition: 'center',
-backgroundRepeat: 'no-repeat',
-height: '20vh',
-border:'red',
-flexDirection: 'column'
-
-
-}}>
-
-</div>
-<div style={{fontSize: 'calc(10px + 1vmin)',}}>
-<h3>Data Storage </h3>
-
-<p>Design and implement scalable and reliable data storage solutions, such as data lakes and data warehouses, to accommodate growing volumes of data.
-</p>
-</div>
-</div> 
-</div>
-
-
-<div style={{ marginTop: '10px', padding: '20px', height: '90vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
-<div 
-className='Data-Exploration'
-style={{ 
-color: 'black', 
-height: '68vh', 
-width: '48vmin',
-padding: '40px', 
-fontSize:'20px',
-borderBottom: '1px solid #02133805', // Set bottom border
-backgroundColor: 'white',  
-}}
-
-onMouseOver={(e) => { e.currentTarget.style.borderBottom = '2px solid #43e794'; }}
-onMouseOut={(e) => { e.currentTarget.style.borderBottom = '2px solid #02133805'; }}>
-<div style={{  backgroundImage: "url('reporting.jpg')", 
-backgroundSize: '70px',
-backgroundPosition: 'center',
-backgroundRepeat: 'no-repeat',
-height: '20vh',
-border:'red',
-flexDirection: 'column',
-
-borderRadius:'0px'}}></div>
-<div style={{fontSize: 'calc(10px + 1vmin)',}}>
-<h3>Data Transformation </h3>
-<p>
-Cleanse, enrich, and transform raw data into actionable insights through advanced data processing techniques and ETL (Extract, Transform, Load) pipelines
-
-</p>
-
-</div>        
-</div>                
-
-
-     
-</div>
-
-<div style={{   marginTop: '10px', padding: '20px', height: '80vh', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
-    
-      
-<div 
-className='Data-Exploration'
-style={{ 
-color: 'black', 
-height: '68vh', 
-width: '48vmin',
-padding: '40px', 
-fontSize:'20px',
-borderBottom: '1px solid #02133805', // Set bottom border
-backgroundColor: 'white',  
-}}
-onMouseOver={(e) => { e.currentTarget.style.borderBottom = '2px solid #43e794'; }}
-onMouseOut={(e) => { e.currentTarget.style.borderBottom = '2px solid #02133805'; }}>
-<div style={{  backgroundImage: "url('real.jpg')", 
-backgroundSize: '70px',
-backgroundPosition: 'center',
-backgroundRepeat: 'no-repeat',
-height: '20vh',
-border:'red',
-flexDirection: 'column'
-
-}}></div>
-<div style={{fontSize: 'calc(10px + 1vmin)',}}>
-<h3>Data Integration</h3>
-
-<p> 
-Integrate disparate data sources and systems to create a unified view of your data landscape, enabling cross-functional analysis and reporting.
-</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div style={{ backgroundSize: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-  <div style={{ textAlign: 'center' }}>
-    <h1> Why Choose Us for Data Engineering?</h1>
-  </div>
-  <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease', rowGap: '50px', padding: '0 20px' }}>
-
-    {/* Greater Insights */}
-            <div className='heading' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', justifyContent: 'center', columnGap: '12px', fontSize: '15px', color: '#000000', }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#012353';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
-      <h5>Expertise</h5>
-      <span className="our">Our team of experienced data engineers possesses deep expertise in designing and implementing cutting-edge data engineering solutions.</span>
-    </div>
-    {/* Enhanced Efficiency */}
-    <div className='heading' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', justifyContent: 'center', columnGap: '12px', fontSize: '15px', color: '#000000', }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#012353';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
-      <h5>Scalability</h5>
-      <span className="our">We prioritize scalability and flexibility in our data architectures, ensuring they can accommodate your evolving business needs and data growth.</span>
-    </div>
-    {/* Agile Decision-Making */}
-    <div className='heading' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', justifyContent: 'center', columnGap: '12px', fontSize: '15px', color: '#000000', }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#012353';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
-      <h5>Reliability</h5>
-      <span className="our">We build robust data pipelines and architectures that prioritize data integrity, reliability, and security, providing peace of mind for your data-driven initiatives.</span>
-    </div>
-    {/* Seamless Integration */}
-    <div className='heading' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', justifyContent: 'center', columnGap: '12px',  fontSize: '15px', color: '#000000',}}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#012353';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
-      <h5>Seamless Integration</h5>
-      <span>We stay abreast of the latest trends and technologies in data engineering, allowing us to deliver innovative solutions that drive business value.</span>
-    </div>
-  </div>
-</div>
-
-          
-          <div style={{ marginTop: '30px', backgroundColor: '#73C6B6', padding: '20px 10px', fontSize: 'calc(10px + 2vmin)', textAlign: 'center', color: 'white' }}>
-            <p>Harness the power of data engineering with Bittwobyte Technologies Pvt. Ltd.'s comprehensive solutions.
-               Whether you're looking to modernize your data infrastructure, optimize data workflows, or unlock the full potential of your data assets, our expert team is here to help.
-               Contact us today to learn more about how our data engineering solutions can accelerate your journey to data-driven success.</p>
- <div style={{ textAlign: 'center' }}>
-              <button 
-                style={{ 
-                  padding: '10px 5px', // Adjust padding for button size
-                  fontSize: '19px', // Adjust font size for button text
-                  backgroundColor: 'white', 
-                  color: 'black',
-                  borderRadius: '10px',
-                  cursor: 'pointer',
-                  transitionDuration: '0.2s',
-                  border: 'none', // Remove border
-                  fontStyle:'bold'
-                }}
-                // Adding hover effect
-                onMouseOver={(e) => { e.target.style.backgroundColor = 'lightblue'; }}
-                onMouseOut={(e) => { e.target.style.backgroundColor = 'white'; }}
-              >
-                Let's Talk
-               
-                
-              </button>
+    return (
+        <div className='containerStyle' style={{ alignItems: 'center', backgroundColor: 'white', width: 'auto' }}>
+            <div style={{
+                backgroundImage: "url('Technology Solutions.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                height: '60vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <div style={{ color: 'white', fontSize: 'calc(12px + 2vmin)', marginRight: '700px', textAlign: 'left', marginLeft: 'auto' }}>
+                    <h1>Data Science</h1>
+                </div>
             </div>
-          </div>
 
-          {/* Footer */}
-      <Footer />
+            <div style={{ marginTop: '50px', fontSize: '20px', height: 'auto' }}>
+                <p>
+                    Unlock the Power of Data Science to Drive Insights and Innovation
+                    At BitTwoByte, we harness the potential of data science to uncover valuable insights, drive informed decision-making, and fuel innovation.
+                    Our Data Science services encompass a range of advanced analytics, machine learning, and artificial intelligence techniques to extract actionable intelligence from your data.
+                </p>
+            </div>
+
+            <div style={{ marginTop: '30px', padding: '0 10px', fontSize: 'calc(8px + 4vmin)', fontStyle: 'normal', color: '#012353 ', textAlign: 'center' }}>
+                <h2>Our Data Science Solutions</h2>
+            </div>
+
+            <div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
+                {/* First Box */}
+                <div
+                    className='Data-Exploration'
+                    style={{
+                        color: 'black',
+                        height: 'auto',
+                        width: '40vmin',
+                        padding: '10px',
+                        fontSize: '20px',
+                        borderBottom: '1px solid #02133805',
+                        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)',
+                        borderRadius: '10px',
+                        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        transition: 'background-color 0.3s ease',
+                        marginLeft: '50px',
+                    }}
+                    onMouseEnter={(e) => handleMouseEnter(e, pathRef1, setIsHovered1)}
+                    onMouseLeave={(e) => handleMouseLeave(e, pathRef1, setIsHovered1)}
+                >
+                    <svg
+                        className="draw-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        {/* Replace the path with the SVG data for the desired icon (data science icon) */}
+                        <path
+                            ref={pathRef1}
+                            d="M12 14l9-5-9-5-9 5 9 5z"
+                            strokeDasharray={isHovered1 ? "1000" : "0"}
+                            strokeDashoffset={isHovered1 ? "0" : "1000"}
+                        />
+                    </svg>
+
+                    <div style={{
+                        textAlign: 'center',
+                        position: 'relative',
+                        top: isHovered1 ? '-14px' : '0',
+                        transition: 'top 0.3s ease',
+                    }}>
+                        <h3>Predictive Analytics</h3>
+                        <p>Unlock insights and anticipate future trends with our predictive analytics solutions. Leverage advanced statistical models and machine learning algorithms to forecast outcomes and optimize decision-making.</p>
+                    </div>
+                </div>
+
+                {/* Second Box */}
+                <div
+                    className='Data-Exploration'
+                    style={{
+                        color: 'black',
+                        height: 'auto',
+                        width: '40vmin',
+                        padding: '10px',
+                        fontSize: '20px',
+                        borderBottom: '1px solid #02133805',
+                        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)',
+                        borderRadius: '10px',
+                        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        transition: 'background-color 0.3s ease',
+                        marginLeft: '50px',
+                    }}
+                    onMouseEnter={(e) => handleMouseEnter(e, pathRef2, setIsHovered2)}
+                    onMouseLeave={(e) => handleMouseLeave(e, pathRef2, setIsHovered2)}
+                >
+                    <svg
+                        className="draw-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        {/* Replace the path with the SVG data for the desired icon (data science icon) */}
+                        <path
+                            ref={pathRef2}
+                            d="M21 6.75v10.5M17.25 19.5V4.5M12 17.25V2.25M7.5 14.25v-8.5M3 12h18"
+                            strokeDasharray={isHovered2 ? "1000" : "0"}
+                            strokeDashoffset={isHovered2 ? "0" : "1000"}
+                        />
+                    </svg>
+
+                    <div style={{
+                        textAlign: 'center',
+                        position: 'relative',
+                        top: isHovered2 ? '-14px' : '0',
+                        transition: 'top 0.3s ease',
+                    }}>
+                        <h3>Machine Learning</h3>
+                        <p>Harness the power of machine learning to extract valuable insights from your data. Our machine learning solutions enable you to build predictive models, automate tasks, and uncover hidden patterns.</p>
+                    </div>
+                </div>
+
+                {/* Third Box */}
+                <div
+                    className='Data-Exploration'
+                    style={{
+                        color: 'black',
+                        height: 'auto',
+                        width: '40vmin',
+                        padding: '10px',
+                        fontSize: '20px',
+                        borderBottom: '1px solid #02133805',
+                        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, 0.1)',
+                        borderRadius: '10px',
+                        background: 'linear-gradient(to right, #CBC3E3, #E6E6FA)',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        transition: 'background-color 0.3s ease',
+                        marginLeft: '50px',
+                    }}
+                    onMouseEnter={(e) => handleMouseEnter(e, pathRef3, setIsHovered3)}
+                    onMouseLeave={(e) => handleMouseLeave(e, pathRef3, setIsHovered3)}
+                >
+                    <svg
+                        className="draw-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        {/* Replace the path with the SVG data for the desired icon (data science icon) */}
+                        <rect x="4" y="4" width="16" height="16" />
+                        <polyline
+                            points={isHovered3 ? "12 6 12 12 16 14" : "12 6 12 6 12 6"}
+                            style={{
+                                strokeDasharray: "100",
+                                strokeDashoffset: isHovered3 ? "0" : "100",
+                                transition: "stroke-dashoffset 1s ease",
+                            }}
+                        />
+                    </svg>
+
+                    <div style={{
+                        textAlign: 'center',
+                        position: 'relative',
+                        top: isHovered3 ? '-14px' : '0',
+                        transition: 'top 0.7s ease',
+                    }}>
+                        <h3>Data Visualization</h3>
+                        <p>Transform complex data into intuitive visuals with our data visualization solutions. Communicate insights effectively and uncover actionable intelligence through interactive charts, graphs, and dashboards.</p>
+                    </div>
+                </div>
+
+                {/* Add more boxes for additional data science solutions as needed */}
+            </div>
+
+            {/* Your code for additional sections and footer goes here */}
+            <div style={{ backgroundSize: '10px' }}>
+  <div style={{ textAlign: 'center' }}>
+    <h1>Why Choose Us for Data Science?</h1>
+  </div>
+
+  <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}>
+
+    <div className='heading' style={{ fontSize: '6px',
+      color: '#000000', border: '3px solid #f5f4f375',
+      fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
+      <div>
+        <h2>Expertise in Data Science</h2>
+      </div>
+      <div style={{ width:'50%' }}>
+        <p>Our team specializes in leveraging advanced data science techniques to extract insights, patterns, and predictions from your data, empowering your decision-making process.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+    <div className='heading' style={{ fontSize: '6px',
+      color: '#000000', border: '3px solid #f5f4f375',
+      fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+      <h2>Scalability </h2>
+      <div style={{ width:'50%' }}>
+        <p>We prioritize scalable data science solutions that can handle large volumes of data and adapt to your organization's growth and changing needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#caa40b';}}>
+    <div className='heading' style={{ fontSize: '6px',
+      color: '#000000', border: '3px solid #f5f4f375',
+      fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+      <h2>Reliability</h2>
+      <div style={{width:'50%'}}> 
+        <p>Trust in our reliable data science methodologies to ensure accuracy, consistency, and integrity in the analysis and interpretation of your data.</p>
+      </div>
+    </div>
+  </div>
+
+  <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+    <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+      <h2>Seamless Integration</h2>
+      <div style={{width:'50%'}}>
+        <p>Our data science solutions seamlessly integrate with your existing infrastructure and workflows, ensuring smooth implementation and minimal disruption to your operations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style={{ marginTop: '30px', backgroundColor: '#012353', padding: '20px 10px', fontSize: 'calc(10px + 2vmin)', textAlign: 'center', color: 'white' }}>
+    <p>Transform your organization with cutting-edge data science solutions from Bittwobyte Technologies Pvt. Ltd. Whether you need predictive analytics, machine learning models, or data-driven insights, our expert team is ready to empower your business.</p>
+    <div className="text-center">
+      <div className="text-center">
+        <a href="/contact" className="btn btn-light btn-lg"
+          style={{
+            padding: '1vw 2vw',
+            fontSize: '1vw',
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '2vw',
+            cursor: 'pointer',
+            transitionDuration: '0.2s',
+            border: 'none',
+            fontWeight: 'bold'
+          }}
+          onMouseOver={(e) => { e.target.style.backgroundColor = 'lightblue'; }}
+          onMouseOut={(e) => { e.target.style.backgroundColor = 'white'; }}
+        >
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <Footer />
         </div>
-
-
-  );
+    );
 };
 
-export default DataScience;
+export default DataScienceService;

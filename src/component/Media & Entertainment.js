@@ -289,7 +289,7 @@ d={isHovered4 ? "M10 5v14l8-7z" : "M10 5v14l8-7z"}
 
                 <div style={{ backgroundSize: '10px' }}>
           <div style={{ textAlign: 'center' }}>
-          <h1> Why Choose BITTWOBYTE?</h1>
+          <h1> Why Choose Us for Media & Entertainment?</h1>
           </div>
 
 
@@ -297,7 +297,7 @@ d={isHovered4 ? "M10 5v14l8-7z" : "M10 5v14l8-7z"}
   
   <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }} onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409'; e.currentTarget.style.color = 'white'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.color = 'black'; }}>
     <div>
     <h2>Expertise</h2>
     </div>
@@ -310,10 +310,10 @@ d={isHovered4 ? "M10 5v14l8-7z" : "M10 5v14l8-7z"}
 
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
             <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
           <h2>Customized Services</h2>
               <div style={{ width:'50%' }}>
               <p>We understand that every business is unique, with its own set of challenges and objectives. That's why we offer customizable services, allowing our clients to choose from a range of options, including end-to-end solutions or individual features, based on their specific requirements.</p>
@@ -321,10 +321,10 @@ d={isHovered4 ? "M10 5v14l8-7z" : "M10 5v14l8-7z"}
           </div>
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
             <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
           <h2>Comprehensive Solutions</h2>
               <div style={{width:'50%'}}> 
               <p> Whether you're a startup looking to launch a groundbreaking media platform or an established company seeking to enhance your digital presence, we have the capabilities to deliver comprehensive solutions that empower your business to thrive in the competitive landscape.</p>
@@ -332,18 +332,18 @@ d={isHovered4 ? "M10 5v14l8-7z" : "M10 5v14l8-7z"}
           </div>
 
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
-            <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
+            <div className='heading' style={{ display: 'flex', justifyContent: 'space-between',flexWrap:'wrap' ,columnGap: '12px',  fontSize: '6px', color: '#000000', border: '3px solid #f5f4f375', fontSize: 'larger' }}  onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
             <h2> Quality Assurance</h2>
               <div style={{width:'50%'}}>
               <p> At BITTWOBYTE, quality is our top priority. We adhere to stringent quality assurance processes to ensure that every project we undertake meets the highest standards of excellence, reliability, and performance.</p>
             </div></div>
           </div>
 
-          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'lightgreen';}}>
+          <div className='Expertise' style={{ margin: '0px', textRendering: 'inherit', backgroundColor: 'white', transition: 'background-color 0.2s ease' }}  onMouseOver={(e) => { e.currentTarget.style.backgroundColor = '#094409';}}>
             <div className='heading' style={{ fontSize: '6px',
    color: '#000000', border: '3px solid #f5f4f375',
-    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = 'lightgreen';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
+    fontSize: 'larger', justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', columnGap: '12px'  }}   onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#094409';e.currentTarget.style.color = 'white';}}onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'white';e.currentTarget.style.color = 'black';}}>  
           <h2>  Client-Centric Approach</h2>
               <div style={{width:'50%'}}> 
               <p> Ready to take your media and entertainment business to the next level? Contact us today to learn more about our services and how we can help you achieve your goals. Let BITTWOBYTE be your trusted partner in innovation and success.</p>

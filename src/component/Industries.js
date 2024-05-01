@@ -15,13 +15,13 @@ const Industries    = () => {
 </div>
 
 <div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'center', columnGap: '1px',marginTop:'20px'  ,backgroundColor:'#F2F3F4 ',}}>
-<div style={{  marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
+<div style={{  marginTop: '10px', padding: '20px', height: 'boxHeight', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
 <a href="Retail" style={{ textDecoration: "none" }}>    
 <div className='Data-Exploration' style={{ 
     color: 'black', 
-    height: 'auto', 
-    width: '40vmin', 
+    height: '100%', 
+    width: '50vmin', 
     padding: '40px', 
     fontSize: '13px', // Reduced font size
     borderBottom: '1px solid #02133805', 
@@ -59,13 +59,13 @@ const Industries    = () => {
 </div>
 </a>
 </div>
-<div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
+<div style={{ marginTop: '10px', padding: '20px', height: 'boxHeight', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
    <a href="Media & Entertainment" style={{ textDecoration: "none" }}>   
    <div className='Data-Exploration' style={{ 
     color: 'black', 
-    height: 'auto', 
-    width: '40vmin', 
+    height: '100%', 
+    width: '50vmin', 
     padding: '40px', 
     fontSize: '13px', // Reduced font size
     borderBottom: '1px solid #02133805', 
@@ -91,7 +91,7 @@ const Industries    = () => {
         backgroundPosition: 'center' // Center the image
     }}></div>
     <div style={{ 
-        marginTop: '42%', // Move content below the image
+        marginTop: '40%', // Move content below the image
         textAlign: 'center' // Center align the content
     }}> 
 <div className="icon larger-icon" style={{ fontSize: '3em' }}>&#x1F3A5;</div>
@@ -107,12 +107,12 @@ Media and entertainment encompass content creation, production, and distribution
 </div>
 
 
-<div style={{ marginTop: '10px', padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
+<div style={{ marginTop: '10px', padding: '20px', height: 'boxHeight', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
 <a href="Banking" style={{ textDecoration: "none" }}>     
 <div className='Data-Exploration' style={{ 
     color: 'black', 
-    height: 'auto', 
-    width: '40vmin', 
+    height: '100%', 
+    width: '50vmin', 
     padding: '40px', 
     fontSize: '13px', // Reduced font size
     borderBottom: '1px solid #02133805', 
@@ -138,7 +138,7 @@ Media and entertainment encompass content creation, production, and distribution
         backgroundPosition: 'center' // Center the image
     }}></div>
     <div style={{ 
-        marginTop: '42%', // Move content below the image
+        marginTop: '40%', // Move content below the image
         textAlign: 'center' // Center align the content
     }}> 
 <div className="icon larger-icon" style={{ fontSize: '3em' }}>&#x1F4B0;</div>
@@ -156,15 +156,15 @@ Banking offers financial services like deposits, playing a vital role in the eco
      
 </div>
 
-<div style={{    padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
+<div style={{    padding: '20px', height: 'boxHeight', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center', }}>
     
       
 <a href="Healthcare" style={{ textDecoration: "none" }}>     
     
 <div className='Data-Exploration' style={{ 
     color: 'black', 
-    height: 'auto', 
-    width: '40vmin', 
+    height: '100%', 
+    width: '50vmin', 
     padding: '40px', 
     fontSize: '13px', // Reduced font size
     borderBottom: '1px solid #02133805', 
@@ -190,7 +190,7 @@ Banking offers financial services like deposits, playing a vital role in the eco
         backgroundPosition: 'center' // Center the image
     }}></div>
     <div style={{ 
-        marginTop: '42%', // Move content below the image
+        marginTop: '40%', // Move content below the image
         textAlign: 'center' // Center align the content
     }}> 
 <div className="icon larger-icon" style={{ fontSize: '3em' }}>&#x2695;</div>
@@ -209,13 +209,13 @@ Healthcare encompasses services across hospitals, clinics, pharmaceuticals, medi
 
 
 
-<div style={{  padding: '20px', height: 'auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
-<a href="URL" style={{ textDecoration: "none" }}>     
+<div style={{  padding: '20px', height: 'boxHeight', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign:'center',  }}>
+<a href="Manufacturing" style={{ textDecoration: "none" }}>     
   
 <div className='Data-Exploration' style={{ 
     color: 'black', 
-    height: 'auto', 
-    width: '40vmin', 
+    height: '100%', 
+    width: '50vmin', 
     padding: '40px', 
     fontSize: '13px', // Reduced font size
     borderBottom: '1px solid #02133805', 

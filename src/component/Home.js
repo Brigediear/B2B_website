@@ -131,7 +131,8 @@ const Home = () => {
       {/* Banner Boxes */}
       <div ref={bannerRef} style={bannerBoxesStyle}>
         <div className="banner-boxes-container">
-<style>
+      
+        <style>
   {`
     .banner-boxes-container {
       background-position: 50%;
@@ -153,16 +154,33 @@ const Home = () => {
       height: 100%; /* Set height to fill the container */
     }
 
+    .single-banner-boxes h3,
+    .single-banner-boxes p {
+      color: #ffffff; /* Set initial text color to white */
+      transition: 0.8s; /* Faster transition for color change */
+    }
+
+    .single-banner-boxes svg {
+      stroke: #ffffff; /* Set initial icon color to white */
+      transition: 0.8s; /* Faster transition for icon color change */
+    }
+
     .single-banner-boxes:hover {
-      background: linear-gradient(135deg, #012353, #43e794);
+      background: linear-gradient(135deg, rgba(1, 35, 83, 0.7), rgba(67, 231, 148, 0.7)); /* Reduce transparency when hovered over */
     }
 
     .single-banner-boxes:hover h3,
     .single-banner-boxes:hover p {
-      color: #ffffff;
+      color: #000000; /* Darker color when hovered over */
+    }
+
+    .single-banner-boxes:hover svg {
+      stroke: #000000; /* Darker icon color when hovered over */
     }
   `}
 </style>
+
+
 
           <div className="container">
             <div className="row justify-content-center">

@@ -14,13 +14,12 @@ const Team = () => {
   useEffect(() => {
     // Mock data for team members
     const mockTeamMembers = [
-      { name: 'Vijay Patel', designation: 'Sr. Vice President | Co-Founder', imageSrc: 'Vijay.png', description: 'Some description for Vijay Patel.' }
+      { name: 'Vijay Patel', designation: 'Co-Founder | Sr. V.P.', imageSrc: 'Vijay.png', description: 'Some description for Vijay Patel.' }
     ];
     setTeamMembers(mockTeamMembers);
   }, []);
 
   const blankPageStyle = {
-    backgroundImage: 'url(tech1.jpg)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     padding: '20px',
@@ -105,7 +104,7 @@ const Team = () => {
 
     /* SeniorTeam.css */
     .background-image {
-      background-image: url('tech1.jpg'); 
+      background-image: url('founder.png'); 
       background-size: cover;
       background-position: center;
       height: 300px; /* Set the height as needed */

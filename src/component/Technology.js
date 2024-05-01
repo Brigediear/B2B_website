@@ -89,8 +89,6 @@ const TechnologyPage = () => {
           padding: '20px',
           borderRadius: '5px',
           marginBottom: '20px',
-          marginLeft: '-10vw',
-          marginRight: '-10vw',
           textAlign: 'left',
         }}
       >
@@ -130,8 +128,6 @@ const TechnologyPage = () => {
     borderBottom: '5px solid #000000',
     borderTop: 'none',
     textAlign: 'center',
-    marginLeft: '-10vw',
-    marginRight: '-10vw',
     marginBottom: '20px', // Add margin bottom for spacing
   };
 
@@ -168,6 +164,15 @@ const TechnologyPage = () => {
     width: '100%',
     height: '100%',
     objectFit: 'contain',
+  };
+
+   // Style for the footer
+   const footerStyle = {
+    height: '100px', // Adjust the height here
+    backgroundColor: '#000000',
+    color: '#ffffff',
+    textAlign: 'center',
+    paddingTop: '20px',
   };
 
   return (

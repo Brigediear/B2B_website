@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="col-md-3">
             {/* Logo Section */}
             <div style={{ flex: '0 0 0%', marginBottom: '20px', alignItems: 'flex-start', justifyContent: 'flex-end' }} className="footer__section">
-              <img src="/imagebtb.png" alt="Company Logo" style={{ width: '100px', height: 'auto', marginLeft: '10px' }} />
+              <img src="/imagebtb.png" alt="Company Logo" style={{ width: '70px', height: 'auto', marginLeft: '10px' }} />
               <p style={{ marginTop: '10px', color: '#00000' }}>BitTwoBye is a technology and professional services company providing analytics, operations, and product engineering services</p>
             </div>
           </div>
@@ -44,11 +44,6 @@ const Footer = () => {
               <li className="list-inline-item">
                 <a href="https://www.linkedin.com/company/bittwobyte-technology-private-limited/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedinIn} style={{ fontSize: '24px', color: '#0077b5' }} />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="https://twitter.com/your-twitter-username" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faTwitter} style={{ fontSize: '24px', color: '#1DA1F2', marginRight: '10px' }} />
                 </a>
               </li>
             </ul>

@@ -46,7 +46,7 @@ const SingleServiceItem = ({ title, description, icon }) => {
         <div className="icon">
           <FontAwesomeIcon icon={icon} />
         </div>
-        <h3><a href="/services/service-details/">{title}</a></h3>
+        <h3><a href="Data Analytics">{title}</a></h3>
         <p>{description}</p>
         <a className="learn-more-btn" href="/services/service-details/"></a>
         <div className="shape">
@@ -90,6 +90,7 @@ const BigDataServicesArea = () => {
             title="Data Analytics"
             description="Analyze vast datasets to uncover patterns, trends, and insights that drive informed decision-making and strategic initiatives."
             icon={faChartBar}
+            link="Data Analytics"
           />
 
           {/* Service 2: Data Engineering */}
@@ -97,6 +98,7 @@ const BigDataServicesArea = () => {
             title="Data Engineering"
             description="Condense intricate data into visually engaging formats to simplify comprehension and streamline communication within Data Engineering."
             icon={faTools}
+            link="Data Engineering"
           />
 
           {/* Service 3: Data Governance */}
@@ -104,6 +106,7 @@ const BigDataServicesArea = () => {
             title="Data Governance"
             description="Establish robust data governance frameworks to ensure data quality, integrity, and compliance across the organization."
             icon={faGavel}
+            link="Data Governance"
           />
 
            {/* Service 3: Data Science */}
@@ -111,6 +114,7 @@ const BigDataServicesArea = () => {
             title="Data Science"
             description="Develop rigorous data governance structures to maintain high standards of quality, integrity, and compliance throughout Data Science operations."
             icon={faFlask}
+            link="Data Science"
           />
 
           {/* Add more services as needed */}

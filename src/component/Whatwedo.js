@@ -92,7 +92,7 @@ const WhatWeDo = () => {
             onMouseLeave={handleLeave}
           >
             <div className="icon larger-icon">&#128161;</div>
-            <h3><a href="/services/service-details/">Data Analytics</a></h3>
+            <h3><a href="Data Analytics">Data Analytics</a></h3>
             <p>Utilize data analytics to extract meaningful insights, inform decision-making, and drive business growth.</p>
           </div>
 
@@ -103,7 +103,7 @@ const WhatWeDo = () => {
             onMouseLeave={handleLeave}
           >
             <div className="icon larger-icon">&#9881;</div>
-            <h3><a href="/services/service-details/">Technology</a></h3>
+            <h3><a href="Technology">Technology</a></h3>
             <p>Innovate and leverage technology to streamline processes, enhance efficiency, and empower progress.</p>
           </div>
         </div>

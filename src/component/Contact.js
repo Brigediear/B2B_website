@@ -1035,7 +1035,7 @@ const Contact = () => {
         padding: '10px 50px',
         fontSize: '16px',
         backgroundColor: 'white',
-        color: 'black',
+        color: 'white',
         borderBlock: '10px',
         borderRadius: '5px',
         cursor: 'pointer',
@@ -1043,7 +1043,7 @@ const Contact = () => {
         fontWeight: 'bold'
       }}
       onMouseOver={(e) => { e.target.style.backgroundColor = '#27AE60'; }}
-      onMouseOut={(e) => { e.target.style.backgroundColor = 'white'; }}
+      onMouseOut={(e) => { e.target.style.backgroundColor = '#012353'; }}
     >
       Submit
     </button>

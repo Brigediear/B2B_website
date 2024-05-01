@@ -64,7 +64,7 @@ function AboutUsComponent() {
             </div>
           </div>
           <h1 style={{ textAlign: 'center' }}>Who We Are</h1>
-          <p style={styles.text}>Lorem ipsum dolor sit amet elit, adipiscing, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+          <p style={styles.text}>BitTwoByte is an IT services organization with the latest technology assets in the Banking, Healthcare, Retail, and Manufacturing domains. It helps organizations achieve frictionless business by transforming their applications, infrastructure, and data to provide operational efficiency, business scale, and an enhanced customer experience.</p>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ ...styles.circle, bottom: '-50px', left: '50px' }}>
               <svg style={styles.svg} className="about-us_bottomvector__nKh54" xmlns="http://www.w3.org/2000/svg" width="201" height="139" viewBox="0 0 201 139" fill="none">
