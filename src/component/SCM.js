@@ -63,7 +63,8 @@ const SCM    = () => {
 <div className="icon larger-icon" style={{ fontSize: '3em' }}>🎩</div>
  
 <h3>Management Consulting </h3>
-    <p> Unlock your data's potential with our advanced analytics solutions at BitTwoByte. Gain valuable insights to optimize operations and make informed decisions. Let our expert team guide you through the world of data analytics.</p>
+    <p> 
+Unlock the full potential of your business with our Management Consulting services at BitTwoByte. Our experienced team offers strategic guidance and innovative solutions to help you overcome challenges and achieve your goals.</p>
 </div>
  
 </div>
@@ -74,7 +75,7 @@ const SCM    = () => {
    <a href="Implementation Services" style={{ textDecoration: "none" }}>  
    <div className='Data-Exploration' style={{
     color: 'black',
-    height: 'auto',
+    height: '66vmin',
     width: '50vmin',
     padding: '40px',
     fontSize: '14px', // Reduced font size
@@ -109,7 +110,8 @@ const SCM    = () => {
 <h3>Implementation Services </h3>
  
 <p>
-Transform your supply chain with our SCM solutions at BitTwoByte. Streamline operations, improve visibility, and enhance collaboration across your supply chain network.</p></div>
+
+Transform your vision into reality with BitTwoByte's Implementation Services. Our dedicated team ensures seamless integration and deployment of cutting-edge solutions tailored to your business needs.</p></div>
  
 </div>
 </a>
@@ -120,7 +122,7 @@ Transform your supply chain with our SCM solutions at BitTwoByte. Streamline ope
 <a href="Upgrade and Migration Services" style={{ textDecoration: "none" }}>    
 <div className='Data-Exploration' style={{
     color: 'black',
-    height: 'auto',
+    height: '66vmin',
     width: '50vmin',
     padding: '40px',
     fontSize: '14px', // Reduced font size
@@ -156,7 +158,8 @@ Transform your supply chain with our SCM solutions at BitTwoByte. Streamline ope
 <p>
  
  
-Elevate your business with our Cloud solutions at BitTwoByte. Harness the flexibility and scalability of cloud computing to optimize resources and drive innovation.</p>
+
+Streamline your technology upgrades and migrations with BitTwoByte's expert services.</p>
  
 </div>        
 </div>                
@@ -209,7 +212,8 @@ style={{ textDecoration: "none" }}>
  
 <p>
  
-Maximize your data's efficiency with our Data Engineering solutions at BitTwoByte. Let us streamline your data processes and ensure seamless integration for enhanced performance.</p></div>
+
+Optimize your IT infrastructure with BitTwoByte's comprehensive managed services.</p></div>
 </div>
 </a>
 </div>
@@ -242,14 +246,14 @@ style={{ textDecoration: "none" }}>
         position: 'absolute', // Absolute positioning for image
         top: '0', // Align image to the top
         left: '0', // Align image to the left
-        height: '40%', // Set height to half of the container
+        height: '55%', // Set height to half of the container
         width: '100%', // Set width to fill the container
         backgroundImage:" url('staffing_IS_IT.png')", // Specify image URL
         backgroundSize: 'cover', // Cover to fill the div
         backgroundPosition: 'center' // Center the image
     }}></div>
     <div style={{
-        marginTop: '35%', // Move content below the image
+        marginTop: '40%', // Move content below the image
         textAlign: 'center' // Center align the content
     }}>
               <div className="icon larger-icon" style={{ fontSize: '3em' }}>💼</div>
@@ -258,7 +262,8 @@ style={{ textDecoration: "none" }}>
  
 <p>
  
-Maximize your data's efficiency with our Data Engineering solutions at BitTwoByte. Let us streamline your data processes and ensure seamless integration for enhanced performance.</p></div>
+
+Access top-tier talent for your IT needs with BitTwoByte's Staffing/IS/IT services.</p></div>
 </div>
 </a>
 </div>

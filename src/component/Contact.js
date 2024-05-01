@@ -1034,7 +1034,7 @@ const Contact = () => {
       style={{
         padding: '10px 50px',
         fontSize: '16px',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         color: 'white',
         borderBlock: '10px',
         borderRadius: '5px',

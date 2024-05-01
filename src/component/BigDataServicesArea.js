@@ -46,7 +46,7 @@ const SingleServiceItem = ({ title, description, icon }) => {
         <div className="icon">
           <FontAwesomeIcon icon={icon} />
         </div>
-        <h3><a href="Data Analytics">{title}</a></h3>
+        <h3><a href="services/service-details/">{title}</a></h3>
         <p>{description}</p>
         <a className="learn-more-btn" href="/services/service-details/"></a>
         <div className="shape">
